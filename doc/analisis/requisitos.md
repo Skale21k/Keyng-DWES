@@ -9,11 +9,11 @@
 
 * __Gestión de Inventarios:__ El sistema debe ser capaz de actualizar automáticamente el inventario después de cada compra y alertar a los administradores cuando un producto está fuera de stock.
 
-* __Notificaciones:__ El sistema enviará notificaciones por correo electrónico o mensajes a los usuarios sobre ofertas, descuentos o novedades.
-
 * __Sistema de Reseñas y Calificaciones:__ Permitir a los usuarios dejar reseñas y calificaciones para los productos.
 
 ### 2. Requistos no funcionales:
+
+* __Notificaciones:__ El sistema enviará notificaciones por correo electrónico o mensajes a los usuarios sobre ofertas, descuentos o novedades.
 
 * __Rendimiento:__ El sistema debería cargar la página en menos de 3 segundos.
 
