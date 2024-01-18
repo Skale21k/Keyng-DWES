@@ -5,4 +5,4 @@ Carrefour     | Uno de los supermercados más conocidos en europa, vendedora de 
 Mercadona  | La empresa lider en supermercados de España.               | [Link](https://tienda.mercadona.es)            | Es una página muy bien diseñada y estructurada, se podría usar como ejemplo para varias cosas.
 Dia | Una empresa muy conocida pero mucho menos habitual que Mercadona. | [Link](https://www.dia.es/) | Su sistema de Registro e Inicio de sesión, es directo, intuitivo y fácil de acceder.
 
-
+[Volver](Analisis.md)
