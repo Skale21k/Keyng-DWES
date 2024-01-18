@@ -36,8 +36,6 @@
 * __Seguridad:__ Implementar medidas de seguridad para proteger el sistema contra amenazas externas e internas. Garantizar la integridad y confidencialidad de los datos almacenados y procesados.
 
 * __Cumplimiento Normativo:__ Asegurarse de que el sistema cumple con las normativas y estándares relevantes en la industria y la jurisdicción.
-* __Requisitos de apariencia:__ 
 
-![Alt text](image.png)
 
 [Volver](Analisis.md)
