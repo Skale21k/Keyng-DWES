@@ -3,12 +3,12 @@
 ## Cliente
 Cliente compra en el supermercado
 
-![Cliente](DiagramaCliente.png)
+![Cliente](imagenes/DiagramaCliente.png)
 
 ## Admin 
 Administrador del supermercado
 
-![Admin](DiagramaAdmin.png)
+![Admin](imagenes/DiagramaAdmin.png)
 
 
 [Volver](Analisis.md)
