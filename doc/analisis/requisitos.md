@@ -32,4 +32,4 @@
 * __Cumplimiento Normativo:__ Asegurarse de que el sistema cumple con las normativas y estándares relevantes en la industria y la jurisdicción.
 
 
-[Volver](Analisis.md)
+[Volver](../Analisis.md)

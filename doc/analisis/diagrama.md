@@ -11,4 +11,4 @@ Administrador del supermercado
 ![Admin](imagenes/DiagramaAdmin.png)
 
 
-[Volver](Analisis.md)
+[Volver](../Analisis.md)

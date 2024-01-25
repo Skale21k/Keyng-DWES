@@ -2,4 +2,4 @@
 
 ![Casos](./imagenes/CasosUsos.png)
 
-[Volver](Analisis.md)
+[Volver](../Analisis.md)
