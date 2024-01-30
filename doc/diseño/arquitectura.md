@@ -13,4 +13,7 @@ Esta arquitectura fomenta la modularidad y la escalabilidad del proyecto, permit
 
 ## Diseño de los datos
 
+#### Modelo Relacional:
+
+![Modelo Relacional](imagenes/modelo_relacional.jpg)
 [Volver](../Diseño.md)
