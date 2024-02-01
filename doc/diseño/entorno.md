@@ -24,6 +24,8 @@ Para los diferentes diagramas hemos utilizado 3 herramientas distinas: [PlantUML
 
 ## Prototipado
 
+El prototipo será hecho en un cuaderno a mano, y también en un html básico.
+
 # Definición del entorno / Automatización
 
 Para el entorno de desarrollo, utlizaremos un docker que contenga Laravel de bitnami y un gestor de bases de datos, MariaDB en este caso.
