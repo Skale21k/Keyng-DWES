@@ -26,7 +26,7 @@ Para los diferentes diagramas hemos utilizado 3 herramientas distinas: [PlantUML
 
 # Definición del entorno / Automatización
 
-Para el entorno de desarrollo, utlizaremos un docker que contenga Laravel de bitnami y un gestor de bases de datos, mysql en este caso.
+Para el entorno de desarrollo, utlizaremos un docker que contenga Laravel de bitnami y un gestor de bases de datos, MariaDB en este caso.
 
 Utilizamos docker para que todos tengamos el mismo entorno de trabajo y no haya problemas a la hora de realizar el proyecto.
 La parte de la base de datos tomará la información del archivo .env que cada uno configurará para su base de datos.
