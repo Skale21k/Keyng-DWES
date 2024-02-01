@@ -2,9 +2,9 @@
 
 ## Control de versiones
 
-Para el control de versiones utilizaremos [GitHub](https://github.com/).
+Para el control de versiones utilizaremos [GitHub](https://github.com/Skale21k/Keyng-DWES).
 
-## Documentación
+## Documentación[](https://github.com/Skale21k/Keyng-DWES)
 
 Para la documentación utilizaremos diferentes herramietas:
 
@@ -24,22 +24,16 @@ Para los diferentes diagramas hemos utilizado 3 herramientas distinas: [PlantUML
 
 ## Prototipado
 
-
 # Definición del entorno / Automatización
 
+Para el entorno de desarrollo, utlizaremos un docker que contenga Laravel de bitnami y un gestor de bases de datos, mysql en este caso.
 
+Utilizamos docker para que todos tengamos el mismo entorno de trabajo y no haya problemas a la hora de realizar el proyecto.
+La parte de la base de datos tomará la información del archivo .env que cada uno configurará para su base de datos.
 
+Al usar docker, es tan fácil como copiar el archivo docker-composer.yml que contiene contiene la configuración de los servicios, redes y volúmenes, despues, solo queda ir a la terminal y ejecutar el comando "docker-composer up".
 
-
-
-
-
-
-
-
-
-
-
-
+Implementaremos facotrías para crear datos para nuestra base de datos y poder probar las funcionalidades que lo requieran.
+También usaremos plantillas para las vistas, con el fin de programarla una vez y poder reutilizarlas.
 
 [Volver](../Diseño.md)
