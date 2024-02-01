@@ -13,7 +13,17 @@ Esta arquitectura fomenta la modularidad y la escalabilidad del proyecto, permit
 
 ## Diseño de los datos
 
-#### Modelo Relacional:
+### Modelo Relacional:
 
 ![Modelo Relacional](imagenes/modelo_relacional.jpg)
+
+
+## Diseño de componentes
+
+### Diagrama de componentes
+
+El proyecto estará compuesto por un servidor Bitnami con Laravel conectado con MariaDB(ambos docketizados), el servicio de Laravel se encargará de crear el framework para el proyecto, y actuará como intérprete y servidor web, este estará conectado a MariaDB, donde guardaremos los datos.
+
+![Diagrama de Componentes](imagenes/componentes.jpg)
+
 [Volver](../Diseño.md)
