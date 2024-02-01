@@ -22,7 +22,7 @@ Esta arquitectura fomenta la modularidad y la escalabilidad del proyecto, permit
 
 ### Diagrama de componentes
 
-El proyecto estará compuesto por un servidor Bitnami con Laravel conectado con MariaDB(ambos docketizados), el servicio de Laravel se encargará de crear el framework para el proyecto, y actuará como intérprete y servidor web, este estará conectado a MariaDB, donde guardaremos los datos.
+El proyecto estará compuesto por un servidor compouesto por Laravel conectado con MariaDB(ambos docketizados), el servicio de Laravel se encargará de crear el framework para el proyecto, y actuará como intérprete y servidor web y este estará conectado a MariaDB, donde guardaremos los datos.
 
 ![Diagrama de Componentes](imagenes/componentes.jpg)
 
