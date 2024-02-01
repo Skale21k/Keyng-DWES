@@ -17,12 +17,12 @@ class ProductoFactory extends Factory
     public function definition(): array
     {
         return [
-            'nombre' => fake()->word(),
-            'descripcion' => fake()->paragraph(),
-            'precio' => fake()->numberBetween(1, 99),
-            'unidades' => fake()->numberBetween(1, 99),
-            'imagen' => fake()->imageUrl(),
-            'categoria' => fake()->word(),
+            'nombre' => $this->faker->word(),
+            'descripcion' => $this->faker->paragraph(),
+            'precio' => $this->faker->numberBetween(1, 99),
+            'unidades' => $this->faker->numberBetween(1, 99),
+            'imagen' => $this->faker->imageUrl(),
+            'categoria' => $this->faker->word(),
         ];
     }
 }
