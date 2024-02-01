@@ -11,6 +11,10 @@ El proyecto estará basado en Laravel, cuya arquitectura sigue el patrón de dis
 
 Esta arquitectura fomenta la modularidad y la escalabilidad del proyecto, permitiendo a los desarrolladores trabajar de manera colaborativa y eficiente en diferentes partes de la aplicación. Además, Laravel ofrece herramientas y convenciones que simplifican el desarrollo y mantenimiento de aplicaciones web robustas y de alto rendimiento.
 
+
+![Arquitectura](imagenes/arquitectura.jpg)
+
+
 ## Diseño de los datos
 
 ### Modelo Relacional:
@@ -24,6 +28,6 @@ Esta arquitectura fomenta la modularidad y la escalabilidad del proyecto, permit
 
 El proyecto estará compuesto por un servidor compouesto por Laravel conectado con MariaDB(ambos docketizados), el servicio de Laravel se encargará de crear el framework para el proyecto, y actuará como intérprete y servidor web y este estará conectado a MariaDB, donde guardaremos los datos.
 
-![Diagrama de Componentes](imagenes/componentes.jpg)
+![Componentes](imagenes/componentes.jpg)
 
 [Volver](../Diseño.md)
