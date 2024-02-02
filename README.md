@@ -6,28 +6,22 @@
 <a href="https://github.com/alexandarIvanov14">Alexandar</a>
 </i>
 ----
-<style>
-h1 {
-    text-align: center;
-}
-</style>
+
 
 
 ## About
-<div style="display: flex;">
-    <img src="https://media.discordapp.net/attachments/1076961338204626976/1202931445316722748/si-Hecho-con-Clipchamp-unscreen.gif?ex=65cf4035&is=65bccb35&hm=65007ec10c033722c8dd0070c230bc89590d0c2f760ac1a0e426a22c9ccf8b42&=" width="200" style="float: left;">
-    <p style="margin-left: 10px;">eyNG Supermercado es un sistema integral diseñado para la gestión eficiente de supermercados, ofreciendo una plataforma completa para administrar todos los aspectos operativos de un negocio minorista. Desde la gestión de productos y control de inventario hasta la administración de pedidos y seguimiento de ventas, KeyNG simplifica y automatiza procesos clave para optimizar la operación de supermercados de cualquier tamaño. Con una interfaz intuitiva y características avanzadas, KeyNG Supermercado proporciona a los usuarios una experiencia fluida y productiva para gestionar su negocio de manera efectiva. </p>
-</div>
+| ![KeyNG Supermercado](https://media.discordapp.net/attachments/1076961338204626976/1202931445316722748/si-Hecho-con-Clipchamp-unscreen.gif?ex=65cf4035&is=65bccb35&hm=65007ec10c033722c8dd0070c230bc89590d0c2f760ac1a0e426a22c9ccf8b42&) |
+|:--:|
+| KeyNG Supermercado es un sistema integral diseñado para la gestión eficiente de supermercados, ofreciendo una plataforma completa para administrar todos los aspectos operativos de un negocio minorista. Desde la gestión de productos y control de inventario hasta la administración de pedidos y seguimiento de ventas, KeyNG simplifica y automatiza procesos clave para optimizar la operación de supermercados de cualquier tamaño. Con una interfaz intuitiva y características avanzadas, KeyNG Supermercado proporciona a los usuarios una experiencia fluida y productiva para gestionar su negocio de manera efectiva. |
+
 
 ## Laravel
-<div style="display: flex;">
-
-<p style="margin-right: 10px;"><u><a href="https://laravel.com/docs/10.x">Laravel</u></a> es un framework de desarrollo web de código abierto y basado en PHP, conocido por su elegancia, simplicidad y eficiencia en la creación de aplicaciones web robustas y escalables. Ofrece una arquitectura MVC (Modelo-Vista-Controlador) que facilita la organización y mantenimiento del código, además de una amplia gama de características y herramientas integradas que aceleran el proceso de desarrollo.
-</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1969px-Laravel.svg.png" width="200" style="float: right;">
 
 
-</div>
+|<a href="https://laravel.com/docs/10.x">Laravel</u></a> es un framework de desarrollo web de código abierto y basado en PHP, conocido por su elegancia, simplicidad y eficiencia en la creación de aplicaciones web robustas y escalables. Ofrece una arquitectura MVC (Modelo-Vista-Controlador) que facilita la organización y mantenimiento del código, además de una amplia gama de características y herramientas integradas que aceleran el proceso de desarrollo. <br><br>|
+|:--:|
+| <br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1969px-Laravel.svg.png" style="width: 300px;"/> |
+
 
 
 ## Características
