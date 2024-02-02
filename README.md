@@ -44,7 +44,7 @@
 
 ## Instalación
 
-1. Necesitas tener git instalado en tu terminal (o <a href=https://gitforwindows.comorg>GitBash</a> en caso de que uses Windows).
+1. Necesitas tener git instalado en tu terminal (o <a href=https://gitforwindows.org>GitBash</a> en caso de que uses Windows).
     
         sudo apt install git
 2. Una vez instalado, clona el repositorio.
