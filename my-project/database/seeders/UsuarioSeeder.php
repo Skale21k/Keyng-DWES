@@ -17,25 +17,25 @@ class UsuarioSeeder extends Seeder
             [
                 'nombre' => 'Juan Pérez',
                 'email' => 'juan.perez@example.com',
-                'contraseña' => 'passwordJuan',
+                'password' => 'passwordJuan',
                 'direccion' => 'Calle Real 123',
             ],
             [
                 'nombre' => 'María García',
                 'email' => 'maria.garcia@example.com',
-                'contraseña' => 'passwordMaria',
+                'password' => 'passwordMaria',
                 'direccion' => 'Avenida de la Luz 456',
             ],
             [
                 'nombre' => 'Carlos Rodríguez',
                 'email' => 'carlos.rodriguez@example.com',
-                'contraseña' => 'passwordCarlos',
+                'password' => 'passwordCarlos',
                 'direccion' => 'Plaza Mayor 789',
             ],
             [
                 'nombre' => 'Ana Torres',
                 'email' => 'ana.torres@example.com',
-                'contraseña' => 'passwordAna',
+                'password' => 'passwordAna',
                 'direccion' => 'Calle del Sol 159',
             ],
             
