@@ -13,13 +13,17 @@ class Usuario extends Model
     protected $fillable = [
         'nombre',
         'email',
-        'contraseña',
+        'password',
         'direccion'
     ];
 
-    public function setContraseñaAttribute($value)
+    protected static function boot()
     {
-        $this->attributes['contraseña'] = Hash::make($value);
+        parent::boot();
+
+        static::saving(function ($usuario) {
+            $usuario->password = Hash::make($usuario->password);
+        });
     }
 
 }

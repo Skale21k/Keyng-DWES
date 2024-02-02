@@ -19,7 +19,7 @@ class UsuarioFactory extends Factory
         return [
             'nombre' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'contraseña' => $this->faker->password(),
+            'password' => $this->faker->password(),
             'direccion' => $this->faker->address(),
         ];
     }

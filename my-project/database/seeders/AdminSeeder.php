@@ -17,12 +17,12 @@ class AdminSeeder extends Seeder
             [
                 'nombre' => 'Juan Pérez',
                 'email' => 'juan.perez@gmail.com',
-                'contraseña' => 'passwordJuan',
+                'password' => 'passwordJuan',
             ],
             [
                 'nombre' => 'María García',
                 'email' => 'maria.garcia@gmail.com',
-                'contraseña' => 'passwordMaria',    
+                'password' => 'passwordMaria',    
             ],
         ];
 

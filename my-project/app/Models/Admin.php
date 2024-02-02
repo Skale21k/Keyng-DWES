@@ -13,11 +13,15 @@ class Admin extends Model
     protected $fillable = [
         'nombre',
         'email',
-        'contraseña'
+        'password'
     ];
 
-    public function setContraseñaAttribute($value)
+    protected static function boot()
     {
-        $this->attributes['contraseña'] = Hash::make($value);
+        parent::boot();
+
+        static::saving(function ($admin) {
+            $admin->password = Hash::make($admin->password);
+        });
     }
 }
