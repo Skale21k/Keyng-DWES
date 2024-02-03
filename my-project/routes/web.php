@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Ruta de Home
+Route::get('/', HomeController::class)->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
+
+//Rutas de productos
+Route::controller(ProductoController::class)->group(function () {
+    Route::get('/productos', 'index')->name('productos.index');
+    Route::get('/productos/{producto}', 'show');
+    Route::get('/productos/create', 'create')->name('productos.create');
 });
+
