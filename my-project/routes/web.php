@@ -17,5 +17,8 @@ use App\Http\Controllers\ProductoController;
 Route::get('/', HomeController::class)->name('home');
 
 
-
+//Rutas de productos
+Route::controller(ProductoController::class)->group(function () {
+    Route::get('/productos', 'index')->name('productos.index');
+});
 
