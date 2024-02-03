@@ -21,5 +21,6 @@ Route::get('/', HomeController::class)->name('home');
 Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos.index');
     Route::get('/productos/{producto}', 'show');
+    Route::get('/productos/create', 'create')->name('productos.create');
 });
 
