@@ -22,7 +22,7 @@ class Carrito extends Model
 
     public function producto()
     {
-        return $this->belongsTo(Producto::class);
+        return $this->belongsToMany(Producto::class);
     }
 
     protected static function boot()

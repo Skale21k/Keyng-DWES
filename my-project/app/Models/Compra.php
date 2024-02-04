@@ -23,7 +23,7 @@ class Compra extends Model
 
     public function producto()
     {
-        return $this->belongsTo(Producto::class);
+        return $this->belongsToMany(Producto::class);
     }
 
 
