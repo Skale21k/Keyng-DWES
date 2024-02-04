@@ -16,8 +16,13 @@ class CompraFactory extends Factory
      */
     public function definition(): array
     {
+
         return [
-            //
+            'usuario_id' => $this->faker->numberBetween(1, 4),
+            'producto_id' => $this->faker->numberBetween(1, 10),
+            'cantidad' => $this->faker->numberBetween(1, 10),   
+            'fecha_compra' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s'),            
         ];
+
     }
 }
