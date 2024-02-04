@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Carrito extends Model
+class Compra extends Model
 {
     use HasFactory;
     protected $fillable = [
         'usuario_id',
         'producto_id',
         'cantidad',
-        'total'
+        'total',
+        'fecha_compra'
     ];
 
     public function usuario()
@@ -25,20 +26,21 @@ class Carrito extends Model
         return $this->belongsToMany(Producto::class);
     }
 
+
     protected static function boot()
     {
         parent::boot();
 
-        static::saving(function ($carrito) {
+        static::saving(function ($compra) {
             // Obtener el precio actual del producto
-            $producto = Producto::find($carrito->producto_id);
+            $producto = Producto::find($compra->producto_id);
             $precioProducto = $producto->precio;
 
-            // Calcular el total del carrito
-            $totalCarrito = $precioProducto * $carrito->cantidad;
+            // Calcular el total de la compra
+            $totalCarrito = $precioProducto * $compra->cantidad;
 
-            // Asignar el total calculado al campo total del carrito
-            $carrito->total = $totalCarrito;
+            // Asignar el total calculado al campo total de la compra
+            $compra->total = $totalCarrito;
         });
     }
 
