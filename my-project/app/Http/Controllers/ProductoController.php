@@ -8,8 +8,8 @@ use App\Models\Producto;
 class ProductoController extends Controller
 {
     public function index(){
-        $todos = Producto::all();
-        return view('productos.index', ['todos'=>$todos]);
+        $productos = Producto::paginate(9);
+        return view('productos.index', compact('productos'));
     }
 
     // Para probar si se crean
