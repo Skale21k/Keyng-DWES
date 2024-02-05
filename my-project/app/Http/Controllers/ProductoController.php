@@ -30,9 +30,9 @@ class ProductoController extends Controller
     }
 
     //Falta investigar cositas.
-    public function show($producto){
-
-        return view('productos.show', ['producto' => $producto]);
+    public function show(request $request){
+        $producto = Producto::find($request->id);
+        return view('productos.show', compact('producto'));
     }
 
 }
