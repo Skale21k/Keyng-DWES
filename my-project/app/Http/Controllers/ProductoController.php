@@ -13,15 +13,15 @@ class ProductoController extends Controller
     }
 
     // Para probar si se crean
-    public function create(){
+    public function create(request $request){
         // Creo el producto
         $p = new Producto();
-        $p->nombre = "Producto";
-        $p->descripcion = "descripcion";
-        $p->precio = 1.1;
-        $p->unidades = 3;
-        $p->imagen = "a";
-        $p->categoria = "a";
+        $p->nombre = $request->nombre;
+        $p->descripcion = $request->descripcion;
+        $p->precio = $request->precio;
+        $p->unidades = $request->unidades;
+        $p->imagen = $request->imagen;
+        $p->categoria = $request->categoria;
 
         // Lo persisto en la base de datos:
         $p->save();
