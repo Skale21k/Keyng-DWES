@@ -14,6 +14,9 @@
     <label for="unidades">Unidades</label>
     <input type="text" name="unidades" id="unidades">
     <br>
+    <label for="imagen">Imagen</label>
+    <input type="text" name="imagen" id="imagen">
+    <br
     <label for="categoria">Categoria</label>
     <input type="text" name="categoria" id="categoria">
     <br>
