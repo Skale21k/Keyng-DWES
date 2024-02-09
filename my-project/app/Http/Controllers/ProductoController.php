@@ -23,7 +23,9 @@ class ProductoController extends Controller
         $p->nombre = $request->nombre;
         $p->descripcion = $request->descripcion;
         $p->precio = $request->precio;
-        $p->disponible = $request->disponible;
+        $p->unidades = $request->unidades;
+        $p->imagen = $request->imagen;
+        $p->categorias = $request->categoria;
 
         // Lo persisto en la base de datos:
         $p->save();
