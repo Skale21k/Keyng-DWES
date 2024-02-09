@@ -21,16 +21,9 @@ Route::get('/', HomeController::class)->name('home');
 //Rutas de productos
 Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos.index');
-<<<<<<< HEAD
-    Route::get('/productos/create', 'create')->name('productos.create');
-    Route::post('/productos', 'store')->name('productos.store');
-    Route::get('/productos/{producto}', 'show');
-=======
     Route::get('/productos/create',  'create')->name('productos.create');
     Route::post('/productos', 'store')->name('productos.store');
     Route::get('/productos/{id}', 'show')->name('productos.show');
-
->>>>>>> feature/controladorLogin
 });
 
 Route::controller(UsuarioController::class)->group(function () {
