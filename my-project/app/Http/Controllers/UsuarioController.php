@@ -13,6 +13,10 @@ class UsuarioController extends Controller
         return view('usuarios.store');
     }
 
+    public function create(){
+        return view('usuarios.create');
+    }
+
     public function store(Request $request){
         $p = new Usuario();
         $p->nombre = $request->nombre;
