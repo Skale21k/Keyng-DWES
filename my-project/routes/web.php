@@ -20,7 +20,8 @@ Route::get('/', HomeController::class)->name('home');
 //Rutas de productos
 Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos.index');
-    Route::get('/productos/{producto}', 'show');
     Route::get('/productos/create', 'create')->name('productos.create');
+    Route::post('/productos', 'store')->name('productos.store');
+    Route::get('/productos/{producto}', 'show');
 });
 

@@ -14,14 +14,16 @@ class ProductoController extends Controller
 
     // Para probar si se crean
     public function create(request $request){
-        // Creo el producto
+
+        return view('productos.create');
+    }
+
+    public function store(Request $request){
         $p = new Producto();
         $p->nombre = $request->nombre;
         $p->descripcion = $request->descripcion;
         $p->precio = $request->precio;
-        $p->unidades = $request->unidades;
-        $p->imagen = $request->imagen;
-        $p->categoria = $request->categoria;
+        $p->disponible = $request->disponible;
 
         // Lo persisto en la base de datos:
         $p->save();
