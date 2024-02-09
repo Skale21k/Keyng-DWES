@@ -9,7 +9,7 @@
     <label for="email">Email</label>
     <input type="email" name="email" id="email">
     <br>
-    <label for="direccion">Unidades</label>
+    <label for="direccion">Direccion</label>
     <input type="text" name="direccion" id="direccion">
     <br>
 
