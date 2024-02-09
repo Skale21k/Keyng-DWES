@@ -18,6 +18,19 @@ class ProductoController extends Controller
         return view('productos.create');
     }
 
+    public function store(Request $request){
+        $p = new Producto();
+        $p->nombre = $request->nombre;
+        $p->descripcion = $request->descripcion;
+        $p->precio = $request->precio;
+        $p->disponible = $request->disponible;
+
+        // Lo persisto en la base de datos:
+        $p->save();
+
+        return view('productos.create');
+    }
+
     public function show($id)
     {
         $producto = Producto::find($id);
