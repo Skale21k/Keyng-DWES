@@ -1,6 +1,6 @@
 <h2>Creacion de porductos</h2>
 
-<form action="{{ route('productos.create') }}" method="GET">
+<form action="{{ route('productos.store') }}" method="POST">
     @csrf
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" id="nombre">
@@ -16,7 +16,7 @@
     <br>
     <label for="imagen">Imagen</label>
     <input type="text" name="imagen" id="imagen">
-    <br
+    <br>
     <label for="categoria">Categoria</label>
     <input type="text" name="categoria" id="categoria">
     <br>
