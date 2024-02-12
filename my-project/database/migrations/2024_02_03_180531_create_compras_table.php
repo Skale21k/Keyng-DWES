@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Ru+n the migrations.
      */
     public function up(): void
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->foreignId('producto_id')->constrained();    
             $table->integer('cantidad');
             $table->decimal('total', 8, 2);

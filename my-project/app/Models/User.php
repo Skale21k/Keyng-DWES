@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Carrito;
 
-class Usuario extends Model
+class User extends Model
 {
     use HasFactory;
 
@@ -22,8 +22,8 @@ class Usuario extends Model
     {
         parent::boot();
 
-        static::saving(function ($usuario) {
-            $usuario->password = Hash::make($usuario->password);
+        static::saving(function ($user) {
+            $user->password = Hash::make($user->password);
         });
     }
 

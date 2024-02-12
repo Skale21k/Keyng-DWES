@@ -9,16 +9,16 @@ class Compra extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'usuario_id',
+        'user_id',
         'producto_id',
         'cantidad',
         'total',
         'fecha_compra'
     ];
 
-    public function usuario()
+    public function user()
     {
-        return $this->belongsTo(Usuario::class);
+        return $this->belongsTo(User::class);
     }
 
     public function producto()
