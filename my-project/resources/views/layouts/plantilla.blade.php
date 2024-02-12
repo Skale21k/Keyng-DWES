@@ -5,6 +5,6 @@
     <title>@yield('title')</title>
 </head>
 <body>
-
+    @include('layouts._partials.header')
 </body>
 </html>
