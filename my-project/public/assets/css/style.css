@@ -98,3 +98,9 @@ header .utilidad .formBusqueda {
 #sobreNosotos{
     width: 200px;
 }
+
+#easter-egg{
+    opacity: 0;
+    position: absolute;
+    left: -100px;
+}
