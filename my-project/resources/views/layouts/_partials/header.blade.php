@@ -2,8 +2,10 @@
     <nav>
 
         <ul>
-            <li><a href=" {{ route('home') }}"> <img src="{{ asset('assets/img/logoBlanco.png') }}" id="logo"
-                    alt=""></a></li>
+            <div class="logo">
+                <li><a href=" {{ route('home') }}"> <img src="{{ asset('assets/img/logoBlancoLetras.png') }}"
+                            id="logo" alt=""></a></li>
+            </div>
         </ul>
 
         <ul class="utilidad">
@@ -16,7 +18,7 @@
             </li>
             <li><a href=""><img src="{{ asset('assets/img/carrito.png') }}" alt=""></a></li>
             <li><a href=" {{ route('usuarios.index') }}"> <img src="{{ asset('assets/img/usuario.png') }}"
-                    alt=""></a></li>
+                        alt=""></a></li>
         </ul>
     </nav>
 </header>
