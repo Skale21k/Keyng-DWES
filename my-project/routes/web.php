@@ -30,4 +30,6 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::get('/usuarios', 'index')->name('usuarios.index');
     Route::get('/usuarios/create',  'create')->name('usuarios.create');
     Route::post('/usuarios', 'store')->name('usuarios.store');
+    Route::get('/login', 'login')->name('usuarios.login');
+    Route::post('/login', 'login')->name('usuarios.login');
 });
