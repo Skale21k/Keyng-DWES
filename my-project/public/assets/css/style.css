@@ -1,6 +1,7 @@
 :root {
     --color-background-header: #333333;
     --color-content-header: #FFFFFF;
+    --color-backgorund-nav: #535353;
 
 
     --header-font: 'Arial Black', sans-serif;
@@ -8,13 +9,30 @@
 
 #logo {
     width: 300px;
-    height: 100px;
+    height: 60px;
+
+}
+
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    background-color: var(--color-backgorund-nav);
+}
+.navegacion li{
+    height: 100%;
+}
+
+.navegacion li:hover {
+    background-color: #2c2c2c;
 
 }
 
 .logo {
     position: absolute;
-    top: -5px;
+    top: 13px;
     left: 5px;
 }
 
@@ -24,7 +42,6 @@ header {
     z-index: 1000;
     width: 100%;
     padding-top: 5px;
-    background-color: lightgray;
     height: 80px;
     margin: 0;
     top: 0;
@@ -47,6 +64,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-left: 30px;
+    font-family: var(--header-font);
 }
 
 nav ul li a {
@@ -75,4 +93,8 @@ header .utilidad .formBusqueda {
     border-radius: 20px;
     height: 30px;
     padding-left: 15px;
+}
+
+#sobreNosotos{
+    width: 200px;
 }
