@@ -1,5 +1,5 @@
 :root {
-    --color-background-header: #0a0a0a;
+    --color-background-header: #333333;
     --color-content-header: #FFFFFF;
 
 
@@ -27,8 +27,8 @@ header {
 }
 
 header img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 nav ul {
@@ -49,6 +49,23 @@ nav ul li a {
 
 header .utilidad {
     position: absolute;
-    top: 4px;
+    top: 8px;
     right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .utilidad .formBusqueda {
+
+    position: absolute;
+    top: 3px;
+    right: 130px;
+    order: -1;
+}
+
+.formBusqueda input {
+    border-radius: 20px;
+    height: 30px;
+    padding-left: 15px;
 }
