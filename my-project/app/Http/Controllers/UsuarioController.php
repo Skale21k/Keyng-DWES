@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Usuario;
 
 
@@ -27,6 +28,18 @@ class UsuarioController extends Controller
         $p->save();
 
         return view('usuarios.create');
+    }
+
+    public function login(){
+
+        $credenciales = request()->only('email','pass');
+        if(Auth::attempt($credenciales)){
+            echo"Estas logeado";
+        }else{
+            echo"mal login";
+        }
+
+        return view('usuarios.login');
     }
 
 }
