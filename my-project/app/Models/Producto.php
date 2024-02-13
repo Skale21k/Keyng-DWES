@@ -22,6 +22,6 @@ class Producto extends Model
 
     public function getImagenUrlAttribute()
     {
-        return asset('asset/img/' . $this->imagen);
+        return asset('assets/img/' . $this->imagen);
     }
 }
