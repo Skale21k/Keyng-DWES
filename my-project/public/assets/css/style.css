@@ -123,3 +123,7 @@ header .utilidad .formBusqueda {
     text-align: center;
     box-sizing: border-box;
 }
+
+.producto img {
+    width: 300px;    
+}
