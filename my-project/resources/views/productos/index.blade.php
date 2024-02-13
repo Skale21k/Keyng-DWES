@@ -7,7 +7,7 @@
     <div class="productos-container">
         @foreach($productos as $producto)
             <div class="producto">
-                <img src="{{ asset('images/'.$producto->imagen) }}" alt="{{ $producto->nombre }}">
+                <img src="{{ asset('assets/img/'.$producto->imagen) }}" alt="{{ $producto->nombre }}">
                 <h3>{{ $producto->nombre }}</h3>
                 <p>Precio: ${{ $producto->precio }}</p>
             </div>
