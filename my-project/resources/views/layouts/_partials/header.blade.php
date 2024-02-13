@@ -25,7 +25,7 @@
     <div class="navegacion">
         <nav>
         <ul>
-            <li>Productos</li>
+            <li><a href="{{route('productos.index')}}">Productos</a></li>
             <li>Administración</li>
             <li id="sobreNosotos">Sobre Nosotros</li>
         </ul>
