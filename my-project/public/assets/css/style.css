@@ -109,6 +109,7 @@ header .utilidad .formBusqueda {
 .productos-container {
     width: 70%;
     margin-left: 20%;
+    margin-top: 8%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
