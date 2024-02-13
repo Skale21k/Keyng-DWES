@@ -2,8 +2,7 @@
 @section('title', 'Home')
 
 @section('content')
-<h1>Home</h1>
-<p>Bienvenido a la página principal</p>
+<h1>Productos destacados</h1>
 <div id="formList">
     <div id="list">
 
