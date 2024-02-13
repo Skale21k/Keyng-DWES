@@ -127,3 +127,7 @@ header .utilidad .formBusqueda {
 .producto img {
     width: 300px;    
 }
+
+main {
+    margin-top: 150px;
+}

@@ -6,9 +6,9 @@
 </head>
 <body>
     @include('layouts._partials.header')
-    <div class="container">
+    <main>
         @yield('content')
-    </div>
+    </main>
     <p id="easter-egg"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">.</a></p>
 </body>
 </html>
