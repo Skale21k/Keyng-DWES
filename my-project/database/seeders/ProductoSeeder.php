@@ -20,7 +20,7 @@ class ProductoSeeder extends Seeder
                 'descripcion' => 'Televisor con resolución 4K y conexión a internet',
                 'precio' => 599.99,
                 'unidades' => 20,
-                'imagen' => 'televisor.jpg',
+                'imagen' => 'tele.jpg',
                 'categoria' => 'Hogar',
             ],
             [
