@@ -162,11 +162,11 @@ main {
     margin:10px;
     scroll-snap-align: start;
 }
-.item .avatar{
+.item .foto{
     display: block;
     margin:50px auto 10px;
-    width:100px;
-    height:150px;
+    width:250px;
+    height:200px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 15px #7e878d;
@@ -182,7 +182,7 @@ main {
 .item .content table td:nth-child(2){
     text-align: right;
 }
-.item .nameGroup{
+.item .descripcion{
     text-align: center;
     border-bottom:none!important;
 }

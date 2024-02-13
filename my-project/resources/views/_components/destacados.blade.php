@@ -1,6 +1,6 @@
 
             <div class="item">
-                <img src="{{ $producto->imagen_url }}" class="avatar">
+                <img src="{{ $producto->imagen_url }}" class="foto">
                 <div class="content">
 
                     
@@ -18,7 +18,7 @@
                             <td>{{$producto->unidades}}</td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="nameGroup">{{$producto ->descripcion}}</td>
+                            <td colspan="2" class="descripcion">{{$producto ->descripcion}}</td>
                         </tr>
                     </table>
                 </div>
