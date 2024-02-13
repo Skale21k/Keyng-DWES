@@ -4,16 +4,16 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Usuario; 
+use App\Models\User; 
 
-class UsuarioSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $usuarios = [
+        $users = [
             [
                 'nombre' => 'Juan Pérez',
                 'email' => 'juan.perez@example.com',
@@ -41,8 +41,8 @@ class UsuarioSeeder extends Seeder
             
         ];
     
-        foreach ($usuarios as $usuario) {
-            Usuario::create($usuario);
+        foreach ($users as $user) {
+            User::create($user);
         }
     }
 }

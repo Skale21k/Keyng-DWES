@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedInteger('cantidad')->default(1); // Nueva columna para la cantidad
             $table->double('total'); // Nueva columna para el total
 
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('usuario_id')->references('id')->on('users');
             $table->foreign('producto_id')->references('id')->on('productos');
 
             $table->timestamps();
