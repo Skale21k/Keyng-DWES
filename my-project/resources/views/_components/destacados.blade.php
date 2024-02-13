@@ -1,27 +1,30 @@
-<div id="formList">
-        <div id="list">
+
             <div class="item">
-                <img src="Chopper.png" class="avatar">
+                <img src="{{ $producto->imagen_url }}" class="avatar">
                 <div class="content">
+
+                    
                     <table width="100%" cellspacing="0">
                         <tr>
-                            <td>Tên</td>
-                            <td>Chopper</td>
+                            <td>{{$producto->nombre}}</td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>Nghề nghiệp</td>
-                            <td>Bác sỉ</td>
+                            <td>Precio:</td>
+                            <td>{{$producto->precio}}€</td>
                         </tr>
                         <tr>
-                            <td>Sức mạnh</td>
-                            <td>Cute</td>
+                            <td>Unidades:</td>
+                            <td>{{$producto->unidades}}</td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="nameGroup">Thành viên băng Mũ Rơm</td>
+                            <td colspan="2" class="nameGroup">{{$producto ->descripcion}}</td>
                         </tr>
                     </table>
                 </div>
             </div>
+
+            <!-- 
             <div class="item">
                 <img src="Brook.png" class="avatar">
                 <div class="content">
@@ -132,12 +135,5 @@
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
 
-    
-    <div class="direction">
-        <button id="prev"> < </button>
-        <button id="next"> > </button>
-    </div>
-    <script src="script.js"></script>
+            -->
