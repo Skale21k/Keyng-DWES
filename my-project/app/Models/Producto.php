@@ -17,4 +17,9 @@ class Producto extends Model
         'imagen',
         'categoria'
     ];
+
+    public function getImagenUrlAttribute()
+    {
+        return asset('img/' . $this->imagen);
+    }
 }
