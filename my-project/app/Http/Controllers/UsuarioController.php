@@ -32,7 +32,7 @@ class UsuarioController extends Controller
 
     public function login(){
 
-        $credenciales = request()->only('email','pass');
+        $credenciales = request()->only('email','password');
         if(Auth::attempt($credenciales)){
             echo"Estas logeado";
         }else{
