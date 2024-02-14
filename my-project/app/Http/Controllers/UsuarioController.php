@@ -34,9 +34,7 @@ class UsuarioController extends Controller
 
         $credenciales = request()->only('email','password');
         if(Auth::attempt($credenciales)){
-            echo"Estas logeado";
-        }else{
-            echo"mal login";
+            return view('welcome');
         }
 
         return view('usuarios.login');
