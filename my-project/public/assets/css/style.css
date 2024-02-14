@@ -20,14 +20,33 @@
     align-items: center;
     margin-top: 60px;
     background-color: var(--color-backgorund-nav);
+    white-space: nowrap; /* Add this line */
+    overflow: auto; /* Add this line */
 }
 .navegacion li{
     height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    padding-right: 10px; /* Add this line */
 }
 
-.navegacion li:hover {
-    background-color: #2c2c2c;
+.navegacion li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: width 0.3s ease-in-out, right 0.3s ease-in-out;
+    transform: translateX(-50%);
+    transform: translateX(50%);
+}
 
+.navegacion li:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .logo {
@@ -96,7 +115,7 @@ header .utilidad .formBusqueda {
 }
 
 #sobreNosotos{
-    width: 200px;
+    width: auto;
 }
 
 #easter-egg{
@@ -125,7 +144,7 @@ header .utilidad .formBusqueda {
 }
 
 .producto img {
-    width: 300px;    
+    width: 300px;
 }
 
 main {
