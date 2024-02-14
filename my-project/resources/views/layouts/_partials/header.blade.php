@@ -17,7 +17,7 @@
                     </div>
                 </li>
                 <li><a href=""><img src="{{ asset('assets/img/carrito.png') }}" alt=""></a></li>
-                <li><a href=" {{ route('usuarios.index') }}"> <img src="{{ asset('assets/img/usuario.png') }}"
+                <li><a href=" {{ route('usuarios.login') }}"> <img src="{{ asset('assets/img/usuario.png') }}"
                             alt=""></a></li>
             </ul>
         </nav>
