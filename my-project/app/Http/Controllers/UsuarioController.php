@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Usuario;
+use App\Models\User;
 
 
 class UsuarioController extends Controller
@@ -19,7 +19,7 @@ class UsuarioController extends Controller
     }
 
     public function store(Request $request){
-        $p = new Usuario();
+        $p = new User();
         $p->nombre = $request->nombre;
         $p->email = $request->email;
         $p->password = $request->password;
