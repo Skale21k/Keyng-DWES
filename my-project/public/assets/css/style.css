@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Futura';
+    src: url(futura.ttf);
+}
+
+body{
+    font-family: Futura;
+}
+
 :root {
     --color-background-header: #333333;
     --color-content-header: #FFFFFF;
