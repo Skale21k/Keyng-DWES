@@ -38,7 +38,7 @@ class ProductoController extends Controller
         $producto = Producto::find($id);
         return view('productos.show', compact('producto'));
     }
-
+    //filtra todo lo que contenga ese nombre
     public function filtro(Request $request){
         $nombre = $request->nombre;
         $productos = Producto::where('nombre', 'like', '%' . $nombre . '%')->get();
