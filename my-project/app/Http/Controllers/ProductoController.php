@@ -14,8 +14,8 @@ class ProductoController extends Controller
 
     // Para probar si se crean
     public function create(request $request){
-
-        return view('productos.create');
+        return "hola";
+        //return view('productos.create');
     }
 
     public function store(Request $request){
