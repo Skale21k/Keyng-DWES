@@ -38,6 +38,12 @@ class UserSeeder extends Seeder
                 'password' => 'passwordAna',
                 'direccion' => 'Calle del Sol 159',
             ],
+            [
+                'nombre' => 'admin1',
+                'email' => 'admin@admin.com',
+                'password' => 'admin',
+                'rol' => 'admin',
+            ],
             
         ];
     

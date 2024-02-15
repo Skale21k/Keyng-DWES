@@ -21,6 +21,7 @@ class UsuarioFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'password' => $this->faker->password(),
             'direccion' => $this->faker->address(),
+            'rol' => $this->faker->randomElement(['admin', 'user']),
         ];
     }
 }
