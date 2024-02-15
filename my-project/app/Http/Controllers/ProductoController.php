@@ -39,9 +39,11 @@ class ProductoController extends Controller
         return view('productos.show', compact('producto'));
     }
 
-    public function filtro($nombre){
-        $producto = Producto::find($nombre);
-        return view('productos.show', compact('producto'));
+    public function filtro(Request $request){
+        $nombre = $request->nombre;
+        $productos = Producto::where('nombre', 'like', '%' . $nombre . '%')->get();
+
+        return view('productos.show', compact('productos'));
     }
 
 }

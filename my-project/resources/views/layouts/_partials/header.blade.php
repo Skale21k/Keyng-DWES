@@ -11,8 +11,9 @@
             <ul class="utilidad">
                 <li>
                     <div class="formBusqueda">
-                        <form action="{{ route('home') }}" method="GET" id="buscarform">
-                            <input type="text" id="s" value="" placeholder="Buscar" />
+                        <form action="{{ route('productos.filtro') }}" method="POST" id="buscarform">
+                            @csrf
+                            <input type="text" name="nombre" placeholder="Buscar" />
                         </form>
                     </div>
                 </li>
