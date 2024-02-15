@@ -10,4 +10,5 @@
     @endcomponent
     @endforeach
 </div>
+{{( $productos->links() )}}
 @endsection
