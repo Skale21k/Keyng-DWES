@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use Illuminate\Support\Facades\Storage;
 
 class ProductoController extends Controller
 {
@@ -14,23 +15,34 @@ class ProductoController extends Controller
 
     // Para probar si se crean
     public function create(request $request){
-        return "hola";
-        //return view('productos.create');
+        return view('productos.create');
     }
 
-    public function store(Request $request){
-        $p = new Producto();
-        $p->nombre = $request->nombre;
-        $p->descripcion = $request->descripcion;
-        $p->precio = $request->precio;
-        $p->unidades = $request->unidades;
-        $p->imagen = $request->imagen;
-        $p->categoria = $request->categoria;
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nombre' => 'required|string',
+            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif',
+        ]);
+    
+        $imagen = $request->file('imagen');
 
-        // Lo persisto en la base de datos:
-        $p->save();
+        $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
 
-        return view('productos.create');
+        // Mueve la imagen a la carpeta public/assets/img
+        $imagen->move(public_path('assets/img'), $nombreImagen);
+        
+        $producto = new Producto();
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->unidades = $request->unidades;
+        $producto->imagen = $nombreImagen; // Guarda la ruta de la imagen en el campo 'imagen'
+        $producto->categoria = $request->categoria;
+
+        $producto->save();
+    
+        return redirect()->route('productos.index')->with('success', 'Producto creado exitosamente.');
     }
 
     public function show($id)
