@@ -335,14 +335,6 @@ class ProductoSeeder extends Seeder
                 'categoria' => 'Hogar',
             ],
             [
-                'nombre' => 'Fuente de Chocolate',
-                'descripcion' => 'Fuente de chocolate con capacidad para 1.5 litros',
-                'precio' => 39.99,
-                'unidades' => 15,
-                'imagen' => 'fuente_chocolate.jpg',
-                'categoria' => 'Hogar',
-            ],
-            [
                 'nombre' => 'Báscula Digital de Cocina',
                 'descripcion' => 'Báscula digital de cocina con pantalla LCD y función de tara',
                 'precio' => 19.99,
@@ -365,22 +357,6 @@ class ProductoSeeder extends Seeder
                 'unidades' => 20,
                 'imagen' => 'silla_oficina.jpg',
                 'categoria' => 'Hogar',
-            ],
-            [
-                'nombre' => 'Pantalones Vaqueros Hombre',
-                'descripcion' => 'Pantalones vaqueros para hombre de corte slim',
-                'precio' => 39.99,
-                'unidades' => 40,
-                'imagen' => 'pantalones_hombre.jpg',
-                'categoria' => 'Moda',
-            ],
-            [
-                'nombre' => 'Pantalones Deportivos Mujer',
-                'descripcion' => 'Pantalones deportivos para mujer, ideales para entrenar',
-                'precio' => 29.99,
-                'unidades' => 50,
-                'imagen' => 'pantalones_mujer.jpg',
-                'categoria' => 'Moda',
             ],
             [
                 'nombre' => 'Gorra de Béisbol',
