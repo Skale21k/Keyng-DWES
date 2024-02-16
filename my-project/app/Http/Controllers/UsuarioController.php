@@ -34,6 +34,8 @@ class UsuarioController extends Controller
 
         $credenciales = request()->only('email','password');
         if(Auth::attempt($credenciales)){
+            //Medida de seguridad.
+            request()->session()->regenerate();
             return view('welcome');
         }
 
