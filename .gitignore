@@ -3,7 +3,6 @@ my-project/node_modules
 my-project/public/build
 my-project/public/hot
 my-project/public/storage
-my-project/storage/*.key
 my-project/vendor
 my-project/.env
 my-project/.env.backup
