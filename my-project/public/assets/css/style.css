@@ -133,31 +133,42 @@ header .utilidad .formBusqueda {
     left: -100px;
 }
 
-/* css de productos */
-.productos-container {
-    width: 70%;
-    margin-left: 20%;
-    margin-top: 8%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.producto {
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.producto img {
-    width: 300px;
-}
-
 main {
     margin-top: 150px;
+}
+/* CSS PRODUCTOS*/
+
+/* Estilos para productos */
+
+.productoH {
+    box-shadow: 0px 7px 7px rgb(36, 36, 36);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px; /* Ajusta el espacio entre las cajas */
+    width: calc(30% - 20px); /* Ajusta el ancho de las cajas */
+    display: flex; /* Utiliza flexbox para centrar la imagen */
+    flex-direction: column; /* Asegura que los elementos hijos se apilen verticalmente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.contenedorH {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las cajas horizontalmente */
+    margin: 10px; /* Espaciado negativo para compensar el margen inferior en las cajas */
+}
+
+.productoH img {
+    width: 70%;
+    height: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.datosH {
+    padding: 15px;
+    text-align: center;
 }
 
 

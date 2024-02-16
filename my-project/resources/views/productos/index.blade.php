@@ -4,11 +4,15 @@
 
 @section('content')
 <h1>Lista de Productos</h1>
-<div class="productos-container">
+<div class="contenedorH">
     @foreach($productos as $producto)
-    <a href="{{ route('productos.show', ['id' => $producto->id]) }}">
-    @component('productos._components.producto', ['producto' => $producto])
-    @endcomponent
+        <div class="productoH">
+            <img src="{{ $producto->imagen_url }}" alt="{{ $producto->nombre }}">
+            <div class="datosH">
+                <h3>{{ $producto->nombre }}</h3>
+                <p>Precio: ${{ $producto->precio }}</p>
+            </div>
+        </div>
     @endforeach
 </div>
 {{( $productos->links() )}}
