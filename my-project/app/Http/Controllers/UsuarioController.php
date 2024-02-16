@@ -43,10 +43,22 @@ class UsuarioController extends Controller
             //Medida de seguridad.
             $request->session()->regenerate();
 
-            return redirect()->intended(route('productos.index'));
+            return redirect()->intended(route('productos.index'))->with('status', "Logeado correctamente.");
         }
 
         return view('usuarios.login');
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+
+        //Invalida la sesion por seguridad.
+        $request->session()->invalidate();
+
+        //Regenera el toker csrf
+        $request->session()->regenerateToken();
+
+        return redirect()->route('productos.index')->with('status', "Sesión cerrada.");
     }
 
 }
