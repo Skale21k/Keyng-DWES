@@ -33,4 +33,5 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::post('/usuarios', 'store')->name('usuarios.store');
     Route::get('/login', 'login')->name('login');
     Route::post('/login', 'login')->name('usuarios.login');
+    Route::post('/logout', 'logout')->name('usuarios.logout');
 });
