@@ -138,25 +138,28 @@ main {
 }
 /* CSS PRODUCTOS*/
 
-/* Estilos para productos */
+.aH {
+    text-decoration: none;
+    color: #000;
 
+}
 .productoH {
     box-shadow: 0px 7px 7px rgb(36, 36, 36);
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 30px; /* Ajusta el espacio entre las cajas */
-    width: calc(30% - 20px); /* Ajusta el ancho de las cajas */
-    display: flex; /* Utiliza flexbox para centrar la imagen */
-    flex-direction: column; /* Asegura que los elementos hijos se apilen verticalmente */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    margin-bottom: 30px;
+    width: calc(30% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenedorH {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra las cajas horizontalmente */
-    margin: 10px; /* Espaciado negativo para compensar el margen inferior en las cajas */
+    justify-content: center;
+    margin: 10px;
 }
 
 .productoH img {
