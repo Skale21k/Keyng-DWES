@@ -3,7 +3,7 @@
         <nav>
             <ul>
                 <div class="logo">
-                    <li><a href=" {{ route('home') }}"> <img src="{{ asset('assets/img/logoBlancoLetras.png') }}"
+                    <li><a href=" {{ route('home') }}"> <img src="{{ Storage::url('img/logoBlancoLetras.png') }}"
                                 id="logo" alt=""></a></li>
                 </div>
             </ul>
@@ -17,8 +17,8 @@
                         </form>
                     </div>
                 </li>
-                <li><a href=""><img src="{{ asset('assets/img/carrito.png') }}" alt=""></a></li>
-                <li><a href=" {{ route('usuarios.login') }}"> <img src="{{ asset('assets/img/usuario.png') }}"
+                <li><a href=""><img src="{{ Storage::url('img/carrito.png') }}" alt=""></a></li>
+                <li><a href=" {{ route('usuarios.login') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
                             alt=""></a></li>
             </ul>
         </nav>
