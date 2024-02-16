@@ -29,8 +29,8 @@ class ProductoController extends Controller
 
         $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
 
-        // Mueve la imagen a la carpeta public/assets/img
-        $imagen->move(public_path('assets/img'), $nombreImagen);
+        // Mueve la imagen a la carpeta
+        $imagen->move(storage_path('app/public/img'), $nombreImagen);
 
         $producto = new Producto();
         $producto->nombre = $request->nombre;
