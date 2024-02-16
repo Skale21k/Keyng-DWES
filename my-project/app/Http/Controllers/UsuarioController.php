@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -30,15 +31,18 @@ class UsuarioController extends Controller
         return view('usuarios.create');
     }
 
-    public function login(){
+
+    public function login(Request $request){
         //Se puede editar el tiempo que dura la sesion en el archivo .env
 
-        $credenciales = request()->only('email','password');
-        $remember = request()->filled('remember');
+        $credenciales = $request->only('email', 'password');
+
+        $remember = $request->filled('remember');
 
         if(Auth::attempt($credenciales, $remember)){
             //Medida de seguridad.
-            request()->session()->regenerate();
+            $request->session()->regenerate();
+
             return view('welcome');
         }
 
