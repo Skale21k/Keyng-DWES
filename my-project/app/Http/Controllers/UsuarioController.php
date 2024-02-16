@@ -43,7 +43,7 @@ class UsuarioController extends Controller
             //Medida de seguridad.
             $request->session()->regenerate();
 
-            return view('welcome');
+            return redirect()->intended(route('productos.index'));
         }
 
         return view('usuarios.login');
