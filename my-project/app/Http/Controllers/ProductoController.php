@@ -42,7 +42,7 @@ class ProductoController extends Controller
 
         $producto->save();
 
-        return redirect()->route('productos.index')->with('success', 'Producto creado exitosamente.');
+        return redirect()->intended(route('productos.index'))->with('success', 'Producto creado exitosamente.');
     }
 
     public function show($id)
