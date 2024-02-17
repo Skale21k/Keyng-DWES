@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class ProductoController extends Controller
 {
     public function index(){
-        $productos = Producto::paginate(9);
+        $productos = Producto::paginate(10);
         return view('productos.index', compact('productos'));
     }
 
@@ -24,14 +24,14 @@ class ProductoController extends Controller
             'nombre' => 'required|string',
             'imagen' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
-    
+
         $imagen = $request->file('imagen');
 
         $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
 
         // Mueve la imagen a la carpeta public/assets/img
         $imagen->move(public_path('assets/img'), $nombreImagen);
-        
+
         $producto = new Producto();
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
@@ -41,7 +41,7 @@ class ProductoController extends Controller
         $producto->categoria = $request->categoria;
 
         $producto->save();
-    
+
         return redirect()->route('productos.index')->with('success', 'Producto creado exitosamente.');
     }
 
