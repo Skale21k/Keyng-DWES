@@ -7,7 +7,6 @@
                                 id="logo" alt=""></a></li>
                 </div>
             </ul>
-
             <ul class="utilidad">
                 <li>
                     <div class="formBusqueda">
@@ -27,7 +26,9 @@
         <nav>
         <ul>
             <li><a href="{{route('productos.index')}}">Productos</a></li>
+            @admin
             <li>Administración</li>
+            @endadmin
             <li id="sobreNosotos">Sobre Nosotros</li>
         </ul>
     </nav>
