@@ -3,6 +3,9 @@
 
 @section('content')
 <h1>Productos destacados</h1>
+<h2>Alimentación</h2>
+<hr>
+<div class="bannerAlimentacion">
 <div id="formList">
     <div id="list">
 
@@ -12,7 +15,7 @@
         @endforeach
     </div>
 </div>
-
+</div>
 
 <div class="direction">
     <button id="prev">
