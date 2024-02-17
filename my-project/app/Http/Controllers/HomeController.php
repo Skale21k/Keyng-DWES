@@ -16,7 +16,7 @@ class HomeController extends Controller
 
         return view('home', [
             'productosAlimentacion' => $productosAlimentacion,
-            'productosBebidas' => $productosHogar,
+            'productosHogar' => $productosHogar,
 
         ]);
     }

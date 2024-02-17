@@ -2361,10 +2361,7 @@ select.form-control-lg:not([size]):not([multiple]) {
 .btn:not(:disabled):not(.disabled):active {
     background-image: none;
 }
-a.btn.disabled,
-fieldset:disabled a.btn {
-    pointer-events: none;
-}
+
 .btn-primary {
     color: #fff;
     background-color: #007bff;
