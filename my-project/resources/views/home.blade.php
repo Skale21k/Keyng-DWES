@@ -6,7 +6,7 @@
 <div id="formList">
     <div id="list">
 
-        @foreach($productos as $producto)
+        @foreach($productosAlimentacion as $producto)
         @component('_components.destacados', ['producto' => $producto])
         @endcomponent
         @endforeach
