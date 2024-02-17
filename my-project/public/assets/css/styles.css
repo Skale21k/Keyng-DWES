@@ -216,9 +216,7 @@ CSS STRUCTURE:
   --bs-btn-disabled-bg: #FFEADA;
   --bs-btn-disabled-border-color: #FFEADA;
 }
-body {
-  letter-spacing: 0.03em;
-}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: var(--heading-font);
   color: var(--dark-color);
