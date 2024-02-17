@@ -1,14 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function __invoke(){
-        //return "Página de inicio";
-        $productos = Producto::paginate(9);
-        return view('home', compact('productos'));
+    public function __invoke()
+    {
+        // categorias
+        $productosAlimentacion = Producto::where('categoria', 'alimentacion')->get();
+        $productosHogar = Producto::where('categoria', 'Hogar')->get();
+
+
+        return view('home', [
+            'productosAlimentacion' => $productosAlimentacion,
+            'productosBebidas' => $productosHogar,
+
+        ]);
     }
 }

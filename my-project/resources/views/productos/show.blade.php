@@ -1,10 +1,8 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Lista de Productos')
+@section('title', 'Detalles del Producto')
 
 @section('content')
-@foreach($productos as $producto)
-    <h1>{{$producto->nombre}}</h1>
-@endforeach
-
+    @component('productos._components.tarjetasProductos', ['producto' => $producto])
+    @endcomponent
 @endsection
