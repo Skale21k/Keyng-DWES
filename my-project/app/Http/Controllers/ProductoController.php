@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class ProductoController extends Controller
 {
     public function index(){
-        $productos = Producto::paginate(9);
+        $productos = Producto::paginate(10);
         return view('productos.index', compact('productos'));
     }
 
@@ -24,6 +24,7 @@ class ProductoController extends Controller
             'nombre' => 'required|string',
             'imagen' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
+
 
         $imagen = $request->file('imagen');
 
