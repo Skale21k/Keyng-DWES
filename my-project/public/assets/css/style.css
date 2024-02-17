@@ -136,43 +136,6 @@ header .utilidad .formBusqueda {
 main {
     margin-top: 150px;
 }
-/* CSS PRODUCTOS*/
-
-.aH {
-    text-decoration: none;
-    color: #000;
-
-}
-.productoH {
-    box-shadow: 0px 7px 7px rgb(36, 36, 36);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 30px;
-    width: calc(30% - 20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.contenedorH {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px;
-}
-
-.productoH img {
-    width: 70%;
-    height: auto;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.datosH {
-    padding: 15px;
-    text-align: center;
-}
 
 
 /* css de prueba */

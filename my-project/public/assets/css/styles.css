@@ -83,7 +83,7 @@ CSS STRUCTURE:
   7.1 Product detail
   7.2 Shop page
 
-    
+
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -119,42 +119,7 @@ CSS STRUCTURE:
     --heading-font        : "Nunito", sans-serif;
 }
 
-body {
-  --bs-link-color: #333;
-  --bs-link-hover-color:#333;
 
-  --bs-link-color-rgb: 40,40,40;
-  --bs-link-hover-color-rgb: 0,0,0;
-
-  /* --bs-link-color: #FFC43F;
-  --bs-link-hover-color: #FFC43F; */
-
-  --bs-light-rgb: 248, 248, 248;
-
-  --bs-font-sans-serif: "Open Sans", sans-serif;
-  --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 2;
-  --bs-body-color: #747474;
-
-  --bs-primary: #FFC43F;
-  --bs-primary-rgb: 255, 196, 63;
-
-  --bs-success: #a3be4c;
-  --bs-success-rgb: 163, 190, 76;
-  
-  --bs-primary-bg-subtle: #FFF9EB;
-  --bs-success-bg-subtle: #eef5e5;
-  
-  --bs-border-color: #F7F7F7;
-
-  --bs-secondary-rgb: 230, 243, 251;
-  /* --bs-success-rgb: 238, 245, 228; */
-  --bs-danger-rgb: 249, 235, 231;
-  --bs-warning-rgb: 255, 249, 235;
-  --bs-info-rgb: 230, 243, 250;
-}
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #ffc43f;
@@ -366,7 +331,7 @@ h1,h2,h3,h4,h5,h6 {
   .block-1 { grid-area: 1 / 1 / 3 / 2; }
   .block-2 { grid-area: 3 / 1 / 4 / 2; }
   .block-3 { grid-area: 4 / 1 / 5 / 2; }
-  
+
 }
 
 /* banner ad */
@@ -525,14 +490,14 @@ h1,h2,h3,h4,h5,h6 {
 .product-tabs .nav-tabs {
   justify-content: flex-end;
   border: none;
-  
+
   --bs-nav-link-hover-color: #111;
   --bs-nav-link-color: #555;
   --bs-nav-tabs-link-border-color: #fff;
   --bs-nav-tabs-link-hover-border-color: transparent;
   --bs-nav-tabs-link-active-border-color: #fff;
 }
-.product-tabs .nav-tabs .nav-link.active, 
+.product-tabs .nav-tabs .nav-link.active,
 .product-tabs .nav-tabs .nav-item.show .nav-link {
   /* border: none; */
   border-bottom: 3px solid var(--accent-color);
