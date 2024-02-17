@@ -21,7 +21,7 @@ Route::get('/', HomeController::class)->name('home');
 //Rutas de productos
 Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos.index');
-    Route::get('/productos/create',  'create')->name('productos.create')->middleware('auth');
+    Route::get('/productos/create',  'create')->name('productos.create')->middleware('admin');
     Route::post('/productos', 'store')->name('productos.store')->middleware('auth');
     Route::post('/productos/filtro', 'filtro')->name('productos.filtro');
     Route::get('/productos/{id}', 'show')->name('productos.show');
