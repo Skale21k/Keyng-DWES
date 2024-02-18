@@ -54,9 +54,12 @@ class ProductoController extends Controller
     //filtra todo lo que contenga ese nombre
     public function filtro(Request $request){
         $nombre = $request->nombre;
-        $productos = Producto::where('nombre', 'like', '%' . $nombre . '%')->get();
+        $productos = Producto::where('nombre', 'like', '%' . $nombre . '%')
+        ->orWhere('descripcion', 'like', '%' . $nombre . '%')
+        ->orWhere('categoria', 'like', '%' . $nombre . '%')
+        ->get();
 
-        return view('productos.filtro', compact('productos'));
+    return view('productos.filtro', compact('productos', 'nombre'));
     }
 
 }
