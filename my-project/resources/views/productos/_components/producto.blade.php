@@ -55,7 +55,7 @@
                                                                     </button>
                                                                 </span>
                                                             </div>
-                                                            <a href="#" class="nav-link">Añadir al carro<iconify-icon icon="uil:shopping-cart"></a>
+                                                            <a href="#" class="nav-link">Añadir al carro</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -68,6 +68,5 @@
                     </div>
                 </div>
             </section>
-
     </div>
 @endforeach
