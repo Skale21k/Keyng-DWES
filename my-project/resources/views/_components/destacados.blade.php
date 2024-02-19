@@ -29,8 +29,8 @@
                 <td id="#cantidad"> </td>
             </tr>
             <tr>
-                
-                <td colspan="2" class="descripcion">{{$producto ->descripcion}} <br><br>
+
+                <td colspan="2" class="descripcion">
                 <a href="#" class="button">Añadir al carro<iconify-icon icon="uil:shopping-cart"></a></td>
             </tr>
         </table>
