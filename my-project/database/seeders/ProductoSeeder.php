@@ -398,6 +398,15 @@ class ProductoSeeder extends Seeder
                 'imagen' => 'kuki.jpg',
                 'categoria' => 'Hogar',
             ],
+            [
+                'nombre' => 'Kuki Sentao',
+                'descripcion' => 'El mejor perro del mundo sentao',
+                'precio' => 9999.99,
+                'unidades' => 1,
+                'imagen' => 'kuki_sentao.jpg',
+                'categoria' => 'Hogar',
+            ],
+
 
             
         ];
