@@ -1,4 +1,3 @@
-<!-- resources/views/index.blade.php -->
 
 @extends('layouts.plantilla')
 
