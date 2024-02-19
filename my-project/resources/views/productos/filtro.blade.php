@@ -8,6 +8,7 @@
             <p>No se encontraron resultados.</p>
         @else
         @component('productos._components.productosFiltrados', ['productos' => $productos])
-        @endif
         @endcomponent
+        @endif
+
 @endsection
