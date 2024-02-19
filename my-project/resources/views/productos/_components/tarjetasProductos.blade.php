@@ -10,7 +10,15 @@
             <p class="desc">{{ $producto->descripcion }}</p>
             <div class="buttons">
                 <button class="add">Agregar al carrito</button>
+
+
             </div>
+
         </div>
+
+
     </div>
+    @admin
+    <button class="add" >Botón de Administrador</button>
+    @endadmin
 </body>
