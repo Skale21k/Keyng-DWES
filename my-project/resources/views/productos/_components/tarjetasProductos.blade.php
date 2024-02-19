@@ -8,9 +8,17 @@
             <h1>{{ $producto->nombre }}</h1>
             <h2>{{ $producto->precio }}€</h2>
             <p class="desc">{{ $producto->descripcion }}</p>
-            <div class="buttons">
+            <div class="button">
                 <button class="add">Agregar al carrito</button>
+                @admin
+                    <button class="add">Botón de Administrador</button>
+                @endadmin
             </div>
+
+
         </div>
+
+
     </div>
+
 </body>
