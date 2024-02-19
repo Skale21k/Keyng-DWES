@@ -41,8 +41,8 @@
 .item .foto {
     display: block;
     margin: 30px auto 10px;
-    width: 250px;
-    height: 200px;
+    width: 95%;
+    height: 250px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 15px #7e878d;
@@ -113,7 +113,9 @@
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
+    text-decoration: none !important;
 }
+
 
 .item .button:hover {
     background-color: var(--color-button-hover) !important;
