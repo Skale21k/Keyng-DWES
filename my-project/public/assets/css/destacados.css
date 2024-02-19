@@ -113,7 +113,9 @@
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
+    text-decoration: none !important;
 }
+
 
 .item .button:hover {
     background-color: var(--color-button-hover) !important;
