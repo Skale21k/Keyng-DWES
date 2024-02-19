@@ -390,6 +390,14 @@ class ProductoSeeder extends Seeder
                 'imagen' => 'raqueta_tenis.jpg',
                 'categoria' => 'Deporte',
             ],
+            [
+                'nombre' => 'Kuki',
+                'descripcion' => 'El mejor perro del mundo comiéndose un churro',
+                'precio' => 9999.99,
+                'unidades' => 1,
+                'imagen' => 'kuki.jpg',
+                'categoria' => 'Hogar',
+            ],
 
             
         ];

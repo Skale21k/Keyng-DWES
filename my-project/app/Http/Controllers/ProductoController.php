@@ -59,7 +59,7 @@ class ProductoController extends Controller
         ->orWhere('categoria', 'like', '%' . $nombre . '%')
         ->get();
 
-    return view('productos.filtro', compact('productos', 'nombre'));
+        return view('productos.filtro', compact('productos', 'nombre'));
     }
 
 }
