@@ -22,8 +22,17 @@ class CartController extends Controller
         return redirect()->route('productos.show', $producto->id)->with("success", "Producto agregado correctamente.");
     }
 
-    public function checkout(Request $request){
+    public function checkout(){
         return view('carrito.checkout');
     }
 
+    public function remove(Request $request){
+        Cart::remove($request->rowId);
+        return redirect()->back()->with("success", "Producto eliminado");
+    }
+
+    public function clear(){
+        Cart::destroy();
+        return redirect()->back()->with("success", "Carrito vaciado");
+    }
 }
