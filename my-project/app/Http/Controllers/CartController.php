@@ -11,11 +11,16 @@ class CartController extends Controller
 {
     public function add(Request $request){
         $producto = Producto::find($request->id);
+        if(isset($request->quantity[$producto->id])){
+            $qty = $request->quantity[$producto->id];
+        } else{
+            $qty = 1;
+        }
         Cart::add([
             'id' => $producto->id,
             'name' => $producto->nombre,
-            'qty' => 1,
             'price' => $producto->precio,
+            'qty' => $qty,
             'options' => ['imagen' => $producto->imagen_url]
         ]);
 
