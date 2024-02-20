@@ -267,3 +267,24 @@ main {
     align-items: top;
     top: 10px;
   }
+
+.imagenProducto{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenShow{
+    width: 100%;
+    height: 100%;
+}
+
+.product-item{
+    width: 300px;
+    height: 300px;
+}
+
+.container-fluid{
+    grid-auto-flow: dense;
+}

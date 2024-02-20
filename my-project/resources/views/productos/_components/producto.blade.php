@@ -2,8 +2,6 @@
     $categorias = \App\Models\Producto::pluck('categoria')->unique();
 @endphp
 
-@foreach($categorias as $nombreCategoria)
-    <h2>{{ $nombreCategoria }}</h2>
     <div class="producto">
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <defs>
@@ -27,13 +25,15 @@
                                     <div class="tab-pane fade show active" id="nav-all" role="tabpanel"
                                         aria-labelledby="nav-all-tab">
                                         <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                                            @foreach(\App\Models\Producto::where('categoria', $nombreCategoria)->get() as $producto)
+                                            @foreach($productos as $producto)
                                             <div class="col">
                                                     <div class="product-item">
                                                         <figure>
-                                                            <a href="{{ route('productos.show', $producto) }}" title="{{ $producto->nombre }}">
-                                                                <img src="{{ $producto->imagen_url }}" class="tab-image" alt="{{ $producto->nombre }}">
-                                                            </a>
+                                                            <div class="imagenProducto">
+                                                                <a href="{{ route('productos.show', $producto) }}" title="{{ $producto->nombre }}">
+                                                                    <img src="{{ $producto->imagen_url }}" class="imagenShow" alt="{{ $producto->nombre }}">
+                                                                </a>
+                                                            </div>  
                                                         </figure>
                                                         <h3>{{ $producto->nombre }}</h3>
                                                         <span class="price">{{ $producto->precio }}€</span>
@@ -68,5 +68,5 @@
                     </div>
                 </div>
             </section>
+            {{ $productos->links() }}
     </div>
-@endforeach
