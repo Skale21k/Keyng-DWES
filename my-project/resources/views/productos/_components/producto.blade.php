@@ -26,7 +26,7 @@
                                         aria-labelledby="nav-all-tab">
                                         <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                                             @foreach($productos as $producto)
-                                            <div class="col">
+                                                <div class="col">
                                                     <div class="product-item">
                                                         <figure>
                                                             <div class="imagenProducto">
@@ -37,36 +37,65 @@
                                                         </figure>
                                                         <h3>{{ $producto->nombre }}</h3>
                                                         <span class="price">{{ $producto->precio }}€</span>
-                                                        <div class="d-flex align-items-center justify-content-between">
-                                                            <div class="input-group product-qty">
-                                                                <span class="input-group-btn">
-                                                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus">
-                                                                        <svg width="16" height="16">
-                                                                            <use xlink:href="#minus"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                </span>
-                                                                <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1">
-                                                                <span class="input-group-btn">
-                                                                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus">
-                                                                        <svg width="16" height="16">
-                                                                            <use xlink:href="#plus"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                </span>
+                                                        <form action="{{route('carrito.add')}}" method="post">
+                                                            @csrf
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <div class="input-group product-qty">
+                                                                    <span class="input-group-btn">
+                                                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus">
+                                                                            <svg width="16" height="16">
+                                                                                <use xlink:href="#minus"></use>
+                                                                            </svg>
+                                                                        </button>
+                                                                    </span>
+                                                                    <input type="text" name="quantity[{{ $producto->id }}]" class="form-control input-number" value="1" min="1">
+                                                                    <span class="input-group-btn">
+                                                                        <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus">
+                                                                            <svg width="16" height="16">
+                                                                                <use xlink:href="#plus"></use>
+                                                                            </svg>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                                <input type="hidden" name="id" value="{{$producto->id}}">
+                                                                <input type="submit" name="btn" class="btn btn-success w-10" value="Añadir al carrito">
                                                             </div>
-                                                            <a href="#" class="nav-link">Añadir al carro</a>
-                                                        </div>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             @endforeach
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        // Función para aumentar y disminuir la cantidad
+                        $('.quantity-right-plus').click(function(e){
+                            // Aumentar la cantidad
+                            e.preventDefault();
+                            var quantityInput = $(this).closest('.product-item').find('.input-number');
+                            var quantity = parseInt(quantityInput.val());
+                            quantityInput.val(quantity + 1);
+                        });
+                
+                        $('.quantity-left-minus').click(function(e){
+                            // Disminuir la cantidad
+                            e.preventDefault();
+                            var quantityInput = $(this).closest('.product-item').find('.input-number');
+                            var quantity = parseInt(quantityInput.val());
+                            if(quantity > 1){
+                                quantityInput.val(quantity - 1);
+                            }
+                        });
+                    });
+                </script>
+                
             </section>
             {{ $productos->links() }}
     </div>
