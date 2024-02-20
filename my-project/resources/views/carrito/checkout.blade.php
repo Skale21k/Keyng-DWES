@@ -15,7 +15,7 @@
                 <tbody>
                     @foreach (Cart::content() as $producto)
                         <tr class="aling-middle">
-                            <td><img src="{{$producto->options->imagen}}" width="50"></td>
+                            <td><img src="{{$producto->options->imagen}}" width="150"></td>
                             <td>{{$producto->name}}</td>
                             <td>{{$producto->qty}}</td>
                             <td>{{number_format($producto->price, 2)}}</td>
