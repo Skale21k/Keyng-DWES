@@ -24,7 +24,7 @@ class CartController extends Controller
             'options' => ['imagen' => $producto->imagen_url]
         ]);
 
-        return redirect()->route('productos.show', $producto->id)->with("success", "Producto agregado correctamente.");
+        return redirect()->back()->with("success", "Producto agregado correctamente.");
     }
 
     public function checkout(){
