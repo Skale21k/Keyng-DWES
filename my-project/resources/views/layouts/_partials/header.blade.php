@@ -16,7 +16,7 @@
                         </form>
                     </div>
                 </li>
-                <li><a href=""><img src="{{ Storage::url('img/carrito.png') }}" alt=""></a></li>
+                <li><a href="{{route('carrito.checkout')}}"><img src="{{ Storage::url('img/carrito.png') }}" alt=""><span class="badge bg-danger">{{\Cart::count()}}</span></a></li>
                 <li><a href=" {{ route('usuarios.login') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
                             alt=""></a></li>
             </ul>

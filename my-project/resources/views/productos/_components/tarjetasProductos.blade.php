@@ -1,3 +1,9 @@
+@if (\Session::get("success"))
+    <div class="alert alert-success  ">
+        <p>{{\Session::get("success")}}</p>
+    </div>
+@endif
+
 <body class="body">
     <div class="container">
         <div class="images">
@@ -8,9 +14,11 @@
             <h1>{{ $producto->nombre }}</h1>
             <h2>{{ $producto->precio }}€</h2>
             <p class="desc">{{ $producto->descripcion }}</p>
-            <div class="buttons">
-                <button class="add">Agregar al carrito</button>
-            </div>
+            <form action="{{route('carrito.add')}}" method="post">
+                @csrf
+                <input type="hidden" name="id" value="{{$producto->id}}">
+                <input type="submit" name="btn" class="btn btn-success w-100" value="add carrito">
+            </form>
         </div>
     </div>
 </body>
