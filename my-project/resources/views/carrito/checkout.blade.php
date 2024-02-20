@@ -6,6 +6,7 @@
             @if (Cart::count())
             <table class="table table-striped">
                 <thead>
+                    <th>Imagen</th>
                     <th>Nombre</th>
                     <th>Cantidad</th>
                     <th>Precio por unidad</th>
@@ -14,7 +15,7 @@
                 <tbody>
                     @foreach (Cart::content() as $producto)
                         <tr class="aling-middle">
-                            <td><img src="{{$producto->imagen}}" width="50"></td>
+                            <td><img src="{{$producto->options->imagen}}" width="50"></td>
                             <td>{{$producto->name}}</td>
                             <td>{{$producto->qty}}</td>
                             <td>{{number_format($producto->price, 2)}}</td>

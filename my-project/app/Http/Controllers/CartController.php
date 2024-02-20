@@ -11,13 +11,13 @@ class CartController extends Controller
 {
     public function add(Request $request){
         $producto = Producto::find($request->id);
-        Cart::add(
-            $producto->id,
-            $producto->nombre,
-            1,
-            $producto->precio,
-            ["image"=>$producto->image]
-        );
+        Cart::add([
+            'id' => $producto->id,
+            'name' => $producto->nombre,
+            'qty' => 1,
+            'price' => $producto->precio,
+            'options' => ['imagen' => $producto->imagen_url]
+        ]);
 
         return redirect()->route('productos.show', $producto->id)->with("success", "Producto agregado correctamente.");
     }
