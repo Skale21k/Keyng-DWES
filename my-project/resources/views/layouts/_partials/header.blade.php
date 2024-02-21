@@ -17,8 +17,16 @@
                     </div>
                 </li>
                 <li><a href="{{route('carrito.checkout')}}"><img src="{{ Storage::url('img/carrito.png') }}" alt=""><span class="badge bg-danger">{{\Cart::count()}}</span></a></li>
-                <li><a href=" {{ route('usuarios.login') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
+                @guest
+                <li><a href="{{ route('usuarios.login') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
                             alt=""></a></li>
+                @else
+                <li><a href="{{ route('usuarios.index') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
+                            alt=""></a></li>
+                @endguest
+
+
+
             </ul>
         </nav>
     </div>

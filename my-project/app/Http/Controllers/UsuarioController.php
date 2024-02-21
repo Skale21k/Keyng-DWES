@@ -12,7 +12,7 @@ class UsuarioController extends Controller
 {
 
     public function index(){
-        return view('usuarios.store');
+        return view('usuarios.index');
     }
 
     public function create(){
@@ -28,7 +28,7 @@ class UsuarioController extends Controller
 
         $p->save();
 
-        return view('usuarios.create');
+        return view('usuarios.index');
     }
 
 
