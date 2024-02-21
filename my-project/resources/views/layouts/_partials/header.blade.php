@@ -27,7 +27,7 @@
         <ul>
             <li><a href="{{route('productos.index')}}">Productos</a></li>
             @admin
-            <li>Administración</li>
+            <li><a href="{{route('admin.users')}}">Administración</a></li>
             @endadmin
             <li id="sobreNosotos">Sobre Nosotros</li>
         </ul>

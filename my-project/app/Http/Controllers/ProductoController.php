@@ -62,4 +62,9 @@ class ProductoController extends Controller
         return view('productos.filtro', compact('productos', 'nombre'));
     }
 
+    public function verProductos(){
+        $productos = Producto::all();
+        return view('admin.productos', compact('productos'));
+    }
+
 }
