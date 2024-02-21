@@ -67,4 +67,9 @@ class ProductoController extends Controller
         return view('admin.productos', compact('productos'));
     }
 
+    public function destroy(Producto $producto){
+        $producto->delete();
+        return redirect()->back()->with('success', 'Producto eliminado exitosamente.');
+    }
+
 }
