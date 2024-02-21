@@ -31,7 +31,7 @@
     <br><br>
 
     <label for="precio">Precio</label>
-    <input type="number" name="precio" id="precio" min="0" value="{{ old('precio', $producto->precio ?? '') }}">
+    <input type="number" name="precio" id="precio" min="0" step="0.01" value="{{ old('precio', $producto->precio ?? '') }}">
     <br><br>
 
     <label for="unidades">Unidades</label>
