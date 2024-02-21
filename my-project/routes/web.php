@@ -26,6 +26,10 @@ Route::controller(ProductoController::class)->group(function () {
     Route::post('/productos', 'store')->name('productos.store')->middleware('admin');
     Route::post('/productos/filtro', 'filtro')->name('productos.filtro');
     Route::get('/productos/{id}', 'show')->name('productos.show');
+    Route::get('/admin/productos', 'verProductos')->name('admin.productos')->middleware('admin');
+    Route::delete('/productos/{producto}', 'destroy')->name('productos.destroy')->middleware('admin');
+    Route::get('/productos/{producto}/edit', 'edit')->name('productos.edit')->middleware('admin');
+    Route::put('/productos/{producto}', 'update')->name('productos.update')->middleware('admin');
 });
 
 //Rutas de usuarios
@@ -36,6 +40,8 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
     Route::post('/login', 'login')->name('usuarios.login');
     Route::post('/logout', 'logout')->name('usuarios.logout');
+    Route::get('/admin/users', 'verUsuarios')->name('admin.users')->middleware('admin');
+    Route::delete('/usuarios/{usuario}', 'destroy')->name('users.destroy')->middleware('admin');
 });
 
 //Rutas de carrito

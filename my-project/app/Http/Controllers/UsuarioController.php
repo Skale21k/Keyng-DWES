@@ -61,4 +61,14 @@ class UsuarioController extends Controller
         return redirect()->route('productos.index')->with('status', "Sesión cerrada.");
     }
 
+    public function verUsuarios(){
+        $users = User::all();
+        return view('admin.users', compact('users'));
+    }
+
+    public function destroy(User $usuario){
+        $usuario->delete();
+        return redirect()->back()->with('success', "Usuario eliminado.");
+    }
+
 }

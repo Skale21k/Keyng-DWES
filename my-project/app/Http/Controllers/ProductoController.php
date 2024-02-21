@@ -43,7 +43,7 @@ class ProductoController extends Controller
 
         $producto->save();
 
-        return redirect()->intended(route('productos.index'))->with('success', 'Producto creado exitosamente.');
+        return redirect()->intended(route('admin.productos'))->with('success', 'Producto creado exitosamente.');
     }
 
     public function show($id)
@@ -60,6 +60,41 @@ class ProductoController extends Controller
         ->get();
 
         return view('productos.filtro', compact('productos', 'nombre'));
+    }
+
+    public function verProductos(){
+        $productos = Producto::all();
+        return view('admin.productos', compact('productos'));
+    }
+
+    public function destroy(Producto $producto){
+        $producto->delete();
+        return redirect()->back()->with('success', 'Producto eliminado exitosamente.');
+    }
+
+    public function edit(Producto $producto)
+    {
+        //dd($producto);
+        return view('productos.edit', compact('producto'));
+    }
+
+    public function update(Producto $producto, Request $request){
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->unidades = $request->unidades;
+        $producto->categoria = $request->categoria;
+        if(isset($request->imagen)){
+            Storage::delete('public/img/' . $producto->imagen);
+            $imagen = $request->file('imagen');
+            $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
+            $imagen->move(storage_path('app/public/img'), $nombreImagen);
+            $producto->imagen = $nombreImagen;
+        }
+
+        $producto->save();
+
+        return redirect()->back()->with('success', 'Producto actualizado exitosamente.');
     }
 
 }
