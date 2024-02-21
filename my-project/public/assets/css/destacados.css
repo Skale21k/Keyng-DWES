@@ -46,6 +46,15 @@
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 15px #7e878d;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.foto img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .item .content {
