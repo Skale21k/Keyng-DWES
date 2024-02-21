@@ -10,8 +10,8 @@ class HomeController extends Controller
     public function __invoke()
     {
         // categorias
-        $productosAlimentacion = Producto::where('categoria', 'alimentacion')->get();
-        $productosHogar = Producto::where('categoria', 'Hogar')->get();
+        $productosAlimentacion = Producto::where('categoria', 'alimentacion')->take(5)->get();
+        $productosHogar = Producto::where('categoria', 'Hogar')->take(5)->get();
 
 
         return view('home', [
