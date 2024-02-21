@@ -313,3 +313,14 @@ main {
     justify-content:center;
     align-items: center;
 }
+
+.login-register{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.login-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
