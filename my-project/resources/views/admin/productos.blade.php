@@ -21,8 +21,8 @@
                     <td>{{ $producto->descripcion }}</td>
                     <td>{{ $producto->precio }}</td>
                     <td>
-                        <a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-info">Editar</a>
-                        <form action="{{ route('productos.destroy', $producto->id) }}" method="POST" style="display: inline">
+                        <a href="{{ route('productos.edit', $producto) }}" class="btn btn-info">Editar</a>
+                        <form action="{{ route('productos.destroy', $producto) }}" method="POST" style="display: inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Eliminar</button>
