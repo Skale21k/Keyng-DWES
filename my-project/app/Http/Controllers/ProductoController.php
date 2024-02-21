@@ -72,4 +72,9 @@ class ProductoController extends Controller
         return redirect()->back()->with('success', 'Producto eliminado exitosamente.');
     }
 
+    public function edit(Producto $producto)
+    {
+        return view('productos.edit', compact('producto'));
+    }
+
 }
