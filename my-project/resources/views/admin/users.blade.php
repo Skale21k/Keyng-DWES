@@ -9,6 +9,7 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Email</th>
+                <th>Rol</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -18,11 +19,12 @@
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->nombre }}</td>
                     <td>{{ $user->email }}</td>
+                    <td>{{ $user->rol }}</td>
                     <td>
                         <a href="{{--{{ route('users.edit', $user) }}--}}" class="btn btn-info">Editar</a>
-                        <form action="{{--{{ route('users.destroy', $user) }}--}}" method="POST" style="display: inline">
+                        <form action="{{ route('users.destroy', $user) }}" method="POST" style="display: inline">
                             @csrf
-                            @method('DELETE')
+                            @method('delete')
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
                 </tr>
