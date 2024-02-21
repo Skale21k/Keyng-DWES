@@ -74,7 +74,27 @@ class ProductoController extends Controller
 
     public function edit(Producto $producto)
     {
+        //dd($producto);
         return view('productos.edit', compact('producto'));
+    }
+
+    public function update(Producto $producto, Request $request){
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->unidades = $request->unidades;
+        $producto->categoria = $request->categoria;
+        if(isset($request->imagen)){
+            Storage::delete('public/img/' . $producto->imagen);
+            $imagen = $request->file('imagen');
+            $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
+            $imagen->move(storage_path('app/public/img'), $nombreImagen);
+            $producto->imagen = $nombreImagen;
+        }
+
+        $producto->save();
+
+        return redirect()->back()->with('success', 'Producto actualizado exitosamente.');
     }
 
 }

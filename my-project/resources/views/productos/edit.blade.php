@@ -6,6 +6,7 @@
 <h2>Actualización de Producto</h2>
 
 @component('productos._components.formulario')
+    @slot('producto', $producto)
 @endcomponent
 @endsection
 

@@ -7,6 +7,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Precio</th>
@@ -16,6 +17,7 @@
         <tbody> 
             @foreach($productos as $producto)
                 <tr>
+                    <td><img src="{{$producto->imagen_url}}" alt="{{ $producto->nombre }}" width="60"></td>
                     <td>{{ $producto->nombre }}</td>
                     <td>{{ $producto->descripcion }}</td>
                     <td>{{ $producto->precio }}€</td>
