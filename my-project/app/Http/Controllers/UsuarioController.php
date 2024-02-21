@@ -28,7 +28,7 @@ class UsuarioController extends Controller
 
         $p->save();
 
-        return view('usuarios.create');
+        return view('usuarios.index');
     }
 
 
