@@ -21,7 +21,7 @@
                 <li><a href="{{ route('usuarios.login') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
                             alt=""></a></li>
                 @else
-                <li><a href="{{ route('usuarios.index') }}"> <img src="{{ Storage::url('img/otro.png') }}"
+                <li><a href="{{ route('usuarios.index') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
                             alt=""></a></li>
                 @endguest
 
