@@ -5,6 +5,7 @@
 
 body{
     font-family: Futura;
+    background-color: #ECECF2;
 }
 
 :root {
@@ -220,7 +221,7 @@ main {
     padding:30px;
     font-family: monospace;
 }
-.item .content table td{
+.item .content le td{
     padding:10px 0;
     border-bottom: 1px solid #AEC0CE;
 }
@@ -280,21 +281,11 @@ main {
     align-items: center;
 }
 
-.imagenProducto {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.imagenProducto img {
-    width: 100%;
+#imagenProducto {
     height: 100%;
-    object-fit: cover;
+    max-width: 100%;
 }
+
 
 .imagenShow{
     width: 100%;

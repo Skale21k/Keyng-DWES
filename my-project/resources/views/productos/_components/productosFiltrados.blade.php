@@ -30,7 +30,7 @@
                                             <figure style="height:200px; width: 300px;>
                                                 <a href=" {{ route('productos.show', $producto) }}"
                                                 title="{{ $producto->nombre }}">
-                                                <img src="{{ $producto->imagen_url }}" class="tab-image"
+                                                <img src="{{ $producto->imagen_url }}" class="tab-image" id="imagenProducto"
                                                     alt="{{ $producto->nombre }}">
                                                 </a>
                                             </figure>

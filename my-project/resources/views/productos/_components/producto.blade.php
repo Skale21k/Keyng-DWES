@@ -32,7 +32,7 @@
                                                     title="{{ $producto->nombre }}">
                                                     <img src="{{ $producto->imagen_url }}"
                                                         alt="{{ $producto->nombre }}"
-                                                        class="tab-image">
+                                                        class="tab-image" id="imagenProducto">
                                                 </a>
                                             </figure>
                                             <h3>{{ $producto->nombre }}</h3>
