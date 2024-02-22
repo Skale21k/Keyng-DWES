@@ -31,11 +31,11 @@
     <br><br>
 
     <label for="precio">Precio</label>
-    <input type="number" name="precio" id="precio" min="0" step="0.01" value="{{ old('precio', $producto->precio ?? '') }}">
+    <input type="number" name="precio" id="precio" min="0" step="0.01" value="{{ old('precio', $producto->precio ?? '') }}" required>
     <br><br>
 
     <label for="unidades">Unidades</label>
-    <input type="number" name="unidades" id="unidades" min="0" value="{{ old('unidades', $producto->unidades ?? '') }}">
+    <input type="number" name="unidades" id="unidades" min="0" value="{{ old('unidades', $producto->unidades ?? '') }}" required>
     <br><br>
 
     <label for="imagen">Imagen</label>
