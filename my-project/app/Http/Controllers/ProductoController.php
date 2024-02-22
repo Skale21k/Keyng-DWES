@@ -57,7 +57,7 @@ class ProductoController extends Controller
         $productos = Producto::where('nombre', 'like', '%' . $nombre . '%')
         ->orWhere('descripcion', 'like', '%' . $nombre . '%')
         ->orWhere('categoria', 'like', '%' . $nombre . '%')
-        ->get();
+        ->paginate(12);
 
         return view('productos.filtro', compact('productos', 'nombre'));
     }
