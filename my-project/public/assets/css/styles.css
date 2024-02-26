@@ -741,3 +741,6 @@ h6 {
     list-style: none; /* Quitamos los puntos de la lista */
     padding: 0; /* Quitamos el espaciado interno de la lista */
 }
+.producto {
+    margin-left: 300px;
+}

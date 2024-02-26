@@ -10,7 +10,7 @@
         <h2>Categorías</h2>
         <ul >
             @foreach($productos->unique('categoria') as $producto)
-            <li><a href="{{ route('productos.categoriaPorCategoria', ['categoria' => $producto->categoria]) }}">{{ $producto->categoria }}</a></li>
+            <li><a href="{{ route('productos.productosPorCategoria', ['categoria' => $producto->categoria]) }}">{{ $producto->categoria }}</a></li>
             @endforeach
         </ul>
       </div>
