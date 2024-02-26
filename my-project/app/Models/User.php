@@ -28,6 +28,7 @@ class User extends Authenticatable
         static::saving(function ($user) {
             $user->password = Hash::make($user->password);
         });
+        
     }
 
     public function getImagenUrlAttribute()

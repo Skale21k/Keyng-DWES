@@ -62,9 +62,10 @@ class UsuarioController extends Controller
             //Medida de seguridad.
             $request->session()->regenerate();
 
-            return redirect()->intended(route('usuarios.index'))->with('status', "Logeado correctamente.");
+            return redirect()->intended(route('usuarios.index'))->with('success', "Logeado correctamente.");
         }
 
+        session()->flash('error', "Credenciales incorrectas.");
         return view('usuarios.login');
     }
 
@@ -103,13 +104,15 @@ class UsuarioController extends Controller
             $usuario->rol = request('rol');
         }
         if(isset(request()->imagen)){
-            Storage::delete('public/img/' . $usuario->imagen);
+            if($usuario->imagen != "usuario.png"){
+                Storage::delete('public/img/' . $usuario->imagen);
+            }
             $imagen = request()->file('imagen');
             $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
             $imagen->move(storage_path('app/public/img'), $nombreImagen);
             $usuario->imagen = $nombreImagen;
         }
-        if(isset(request()->password)){
+        if($request->filled('password')){
             $usuario->password = request('password');
         }
         $usuario->save();
