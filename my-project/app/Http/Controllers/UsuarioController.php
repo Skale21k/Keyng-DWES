@@ -93,7 +93,12 @@ class UsuarioController extends Controller
 
     public function edit(User $usuario)
     {
-        return view('usuarios.edit', compact('usuario'));
+        if(Auth::id() == $usuario->id || Auth::user()->rol == "admin"){
+            return view('usuarios.edit', compact('usuario'));
+        }else{
+            return redirect()->route('usuarios.index')->with('error', "No puedes editar a otro usuario.");
+        }
+        
     }
 
     public function update(User $usuario, Request $request){
@@ -116,7 +121,10 @@ class UsuarioController extends Controller
             $usuario->password = request('password');
         }
         $usuario->save();
-        return redirect()->route('usuarios.index')->with('status', "Usuario actualizado.");
+        if(Auth::user()->rol == "admin"){
+            return redirect()->route('admin.users')->with('success', "Usuario actualizado.");
+        }
+        return redirect()->route('usuarios.index')->with('success', "Usuario actualizado.");
     }
 
 }
