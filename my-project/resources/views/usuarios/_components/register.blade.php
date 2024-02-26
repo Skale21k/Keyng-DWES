@@ -60,7 +60,7 @@
     
 
     <!-- Submit button -->
-    <button type="submit" id="registerButton" class="btn btn-primary btn-block mb-3">Sign in</button>
+    <button type="submit" id="registerButton" class="btn btn-primary btn-block mb-3">@if($modoCreacion) Registrarse @else Aplicar cambios @endif </button>
 </form>
 
 <script>

@@ -6,6 +6,7 @@ use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 
 class UsuarioController extends Controller
@@ -76,7 +77,7 @@ class UsuarioController extends Controller
         //Regenera el toker csrf
         $request->session()->regenerateToken();
 
-        return redirect()->route('usuarios.index')->with('status', "Sesión cerrada.");
+        return redirect()->route('home')->with('status', "Sesión cerrada.");
     }
 
     public function verUsuarios(){
@@ -92,6 +93,27 @@ class UsuarioController extends Controller
     public function edit(User $usuario)
     {
         return view('usuarios.edit', compact('usuario'));
+    }
+
+    public function update(User $usuario){
+        $usuario->nombre = request('nombre');
+        $usuario->email = request('email');
+        $usuario->direccion = request('direccion');
+        if(isset(request()->rol)){
+            $usuario->rol = request('rol');
+        }
+        if(isset(request()->imagen)){
+            Storage::delete('public/img/' . $usuario->imagen);
+            $imagen = request()->file('imagen');
+            $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
+            $imagen->move(storage_path('app/public/img'), $nombreImagen);
+            $usuario->imagen = $nombreImagen;
+        }
+        if(isset(request()->password)){
+            $usuario->password = request('password');
+        }
+        $usuario->save();
+        return redirect()->route('usuarios.index')->with('status', "Usuario actualizado.");
     }
 
 }
