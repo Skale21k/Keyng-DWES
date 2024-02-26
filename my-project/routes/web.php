@@ -46,9 +46,9 @@ Route::controller(UsuarioController::class)->group(function () {
 
 //Rutas de carrito
 Route::controller(CartController::class)->group(function () {
-    Route::post('/cart/add', 'add')->name('carrito.add');
-    Route::get('/cart/checkout', 'checkout')->name('carrito.checkout');
-    Route::get('/cart/clear', 'clear')->name('carrito.clear');
-    Route::post('/cart/remove', 'remove')->name('carrito.remove');
+    Route::post('/cart/add', 'add')->name('carrito.add')->middleware('auth');
+    Route::get('/cart/checkout', 'checkout')->name('carrito.checkout')->middleware('auth');
+    Route::get('/cart/clear', 'clear')->name('carrito.clear')->middleware('auth');
+    Route::post('/cart/remove', 'remove')->name('carrito.remove')->middleware('auth');
 });
 
