@@ -26,6 +26,13 @@ class UsuarioController extends Controller
         $p->password = $request->password;
         $p->direccion = $request->direccion;
 
+        if(isset($request->imagen)){
+            $imagen = $request->file('imagen');
+            $nombreImagen = $imagen->getClientOriginalName();
+            $imagen->move(storage_path('app/public/img'), $nombreImagen);
+            $p->imagen = $nombreImagen;
+        }
+
         $p->save();
 
         $credenciales = $request->only('email', 'password');
