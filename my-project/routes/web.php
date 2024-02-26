@@ -41,7 +41,9 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::post('/login', 'login')->name('usuarios.login');
     Route::post('/logout', 'logout')->name('usuarios.logout');
     Route::get('/admin/users', 'verUsuarios')->name('admin.users')->middleware('admin');
-    Route::delete('/usuarios/{usuario}', 'destroy')->name('users.destroy')->middleware('admin');
+    Route::delete('/usuarios/{usuario}', 'destroy')->name('usuarios.destroy')->middleware('admin');
+    Route::get('/usuarios/{usuario}/edit', 'edit')->name('usuarios.edit')->middleware('auth');
+    Route::put('/usuarios/{usuario}', 'update')->name('usuarios.update')->middleware('auth');
 });
 
 //Rutas de carrito

@@ -27,6 +27,7 @@
                 <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
                     @component('usuarios._components.login')
                     @endcomponent
+                    <p>{{session('error') }}</p>
                 </div>
 
                 <!-- Register form -->

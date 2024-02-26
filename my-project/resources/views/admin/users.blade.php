@@ -21,8 +21,8 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->rol }}</td>
                     <td>
-                        <a href="{{--{{ route('users.edit', $user) }}--}}" class="btn btn-info">Editar</a>
-                        <form action="{{ route('users.destroy', $user) }}" method="POST" style="display: inline">
+                        <a href="{{ route('usuarios.edit', $user) }}" class="btn btn-info">Editar</a>
+                        <form action="{{ route('usuarios.destroy', $user) }}" method="POST" style="display: inline">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-danger">Eliminar</button>
