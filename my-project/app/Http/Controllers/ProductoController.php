@@ -96,5 +96,10 @@ class ProductoController extends Controller
 
         return redirect()->back()->with('success', 'Producto actualizado exitosamente.');
     }
+    public function productosPorCategoria($categoria)
+    {
+        $productos = Producto::where('categoria', $categoria)->get();
+        return view('productos.productosPorCategoria', compact('productos'));
+    }
 
 }
