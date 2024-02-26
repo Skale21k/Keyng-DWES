@@ -95,7 +95,7 @@ class UsuarioController extends Controller
         return view('usuarios.edit', compact('usuario'));
     }
 
-    public function update(User $usuario){
+    public function update(User $usuario, Request $request){
         $usuario->nombre = request('nombre');
         $usuario->email = request('email');
         $usuario->direccion = request('direccion');
