@@ -28,6 +28,17 @@ class UsuarioController extends Controller
 
         $p->save();
 
+        $credenciales = $request->only('email', 'password');
+
+        $remember = $request->filled('remember');
+
+        if(Auth::attempt($credenciales, $remember)){
+            //Medida de seguridad.
+            $request->session()->regenerate();
+
+            return redirect()->intended(route('productos.index'))->with('status', "Logeado correctamente.");
+        }
+
         return view('usuarios.index');
     }
 
