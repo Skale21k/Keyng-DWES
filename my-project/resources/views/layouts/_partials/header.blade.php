@@ -22,7 +22,7 @@
                             alt=""></a></li>
                 @else
                 <li><a href="{{ route('usuarios.index') }}"> <img src="{{ Auth::user()->imagen_url }}"
-                            alt=""></a></li>
+                            alt="" style="border-radius: 100%;"></a></li>
                 @endguest
 
 

@@ -2,18 +2,18 @@
     use App\Models\User;
 
     $modoCreacion = true;
-    if (isset($producto->nombre)) {
+    if (isset($usuarios->nombre)) {
         $modoCreacion = false;
     }
 
     $rutaAction = route('usuarios.store');
     if(!$modoCreacion){
-        $rutaAction = route('usuarios.update', $producto);
+        $rutaAction = route('usuarios.update', $usuarios);
     }
 
 @endphp
 
-<form action="{{$rutaAction}}" method="POST">
+<form action="{{$rutaAction}}" method="POST" enctype="multipart/form-data">
 
     @csrf
     @if(!$modoCreacion)
@@ -41,20 +41,34 @@
 
     </div>
 
-    <!-- Password input -->
+    
     <div class="form-outline mb-4">
         <label class="form-label" for="registerPassword">Contraseña</label>
-        <input type="password" id="registerPassword" class="form-control" name="password" value="{{ old('password', $usuarios->password ?? '')}}" required/>
+        <input type="password" id="registerPassword" class="form-control" name="password" @if($modoCreacion) required @endif/>
 
     </div>
 
-    <!-- Repeat Password input -->
     <div class="form-outline mb-4">
         <label class="form-label" for="registerRepeatPassword">Repite contraseña</label>
-        <input type="password" id="registerRepeatPassword" class="form-control" value="{{ old('password', $usuarios->password ?? '')}}" required/>
-
+        <input type="password" id="registerRepeatPassword" class="form-control"/>
     </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="registerImagen">Imagen</label>
+        <input type="file" id="imagen" class="form-control" name="imagen"/>
+    </div>
+    
 
     <!-- Submit button -->
     <button type="submit" id="registerButton" class="btn btn-primary btn-block mb-3">Sign in</button>
 </form>
+
+<script>
+    document.getElementById('registerPassword').addEventListener('input', function() {
+        if (this.value.length > 0) {
+            document.getElementById('registerRepeatPassword').required = true;
+        } else {
+            document.getElementById('registerRepeatPassword').required = false;
+        }
+    });
+</script>

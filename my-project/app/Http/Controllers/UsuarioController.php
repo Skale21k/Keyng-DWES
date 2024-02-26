@@ -43,7 +43,7 @@ class UsuarioController extends Controller
             //Medida de seguridad.
             $request->session()->regenerate();
 
-            return redirect()->intended(route('productos.index'))->with('status', "Logeado correctamente.");
+            return redirect()->intended(route('usuarios.index'))->with('status', "Logeado correctamente.");
         }
 
         return view('usuarios.index');
@@ -61,7 +61,7 @@ class UsuarioController extends Controller
             //Medida de seguridad.
             $request->session()->regenerate();
 
-            return redirect()->intended(route('productos.index'))->with('status', "Logeado correctamente.");
+            return redirect()->intended(route('usuarios.index'))->with('status', "Logeado correctamente.");
         }
 
         return view('usuarios.login');
@@ -76,7 +76,7 @@ class UsuarioController extends Controller
         //Regenera el toker csrf
         $request->session()->regenerateToken();
 
-        return redirect()->route('productos.index')->with('status', "Sesión cerrada.");
+        return redirect()->route('usuarios.index')->with('status', "Sesión cerrada.");
     }
 
     public function verUsuarios(){
@@ -87,6 +87,11 @@ class UsuarioController extends Controller
     public function destroy(User $usuario){
         $usuario->delete();
         return redirect()->back()->with('success', "Usuario eliminado.");
+    }
+
+    public function edit(User $usuario)
+    {
+        return view('usuarios.edit', compact('usuario'));
     }
 
 }
