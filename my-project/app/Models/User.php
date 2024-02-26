@@ -24,11 +24,12 @@ class User extends Authenticatable
     protected static function boot()
     {
         parent::boot();
-
+    
         static::saving(function ($user) {
-            $user->password = Hash::make($user->password);
+            if ($user->isDirty('password')) {
+                $user->password = Hash::make($user->password);
+            }
         });
-        
     }
 
     public function getImagenUrlAttribute()
