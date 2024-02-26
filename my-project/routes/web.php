@@ -30,6 +30,7 @@ Route::controller(ProductoController::class)->group(function () {
     Route::delete('/productos/{producto}', 'destroy')->name('productos.destroy')->middleware('admin');
     Route::get('/productos/{producto}/edit', 'edit')->name('productos.edit')->middleware('admin');
     Route::put('/productos/{producto}', 'update')->name('productos.update')->middleware('admin');
+    Route::get('/categoria/{categoria}', 'productosPorCategoria')->name('productos.categoriaPorCategoria');
 });
 
 //Rutas de usuarios
