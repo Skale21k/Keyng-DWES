@@ -39,10 +39,32 @@ class UserSeeder extends Seeder
                 'direccion' => 'Calle del Sol 159',
             ],
             [
-                'nombre' => 'admin1',
-                'email' => 'admin@admin.com',
-                'password' => 'admin',
+                'nombre' => 'Alexandru Alin Olaru',
+                'email' => 'alexandru@admin.com',
+                'password' => 'alexandru',
                 'rol' => 'admin',
+                'imagen' => 'alexandru.jpg',
+            ],
+            [
+                'nombre' => 'Alexandar Ivanov Svetlinov',
+                'email' => 'alexandar@admin.com',
+                'password' => 'alexandar',
+                'rol' => 'admin',
+                'imagen' => 'alexandar.jpg',
+            ],
+            [
+                'nombre' => 'Sergio Kossowski',
+                'email' => 'sergio@admin.com',
+                'password' => 'sergio',
+                'rol' => 'admin',
+                'imagen' => 'sergio.jpg',
+            ],
+            [
+                'nombre' => 'Ruben Darío Soto Montaña',
+                'email' => 'darío@admin.com',
+                'password' => 'darío',
+                'rol' => 'admin',
+                'imagen' => 'dario.jpg',
             ],
             
         ];
