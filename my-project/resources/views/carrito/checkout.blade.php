@@ -48,7 +48,13 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="{{route("carrito.clear")}}" class="text-center">Vaciar carrito</a>
+            <a href="{{route("carrito.clear")}}" class="btn btn-outline-danger">Vaciar carrito</a>
+            <form action="{{route("pago.paypal")}}" method="post">
+                @csrf
+                <input type="hidden" name="total" value="{{Cart::total()}}">
+                <input type="hidden" name="productos" value="{{Cart::content()}}">
+                <input type="submit" name="btn" class="btn btn-outline-info btn-sm" value="Pagar en PayPal">
+            </form>
             @else
             <a href="/" class="text-center">El carrito está vacío, añade productos</a>
             @endif
