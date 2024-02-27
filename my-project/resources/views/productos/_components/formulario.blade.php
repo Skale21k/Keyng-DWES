@@ -58,4 +58,4 @@
 
 
 
-<button type="submit" style="top:10px; position: relative;"><a href="{{route('admin.productos')}}">Volver</a></button>
+<button type="button" style="top:10px; position: relative;" onclick="history.back()">Volver</button>

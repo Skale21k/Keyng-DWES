@@ -78,7 +78,9 @@ $rutaAction = route('usuarios.update', $usuarios);
     <button type="submit" id="registerButton" class="btn btn-primary btn-block mb-3">@if($modoCreacion) Registrarse
         @else Aplicar cambios @endif </button>
 </form>
-
+@if(!$modoCreacion)
+    <button type="button" style="top:10px; position: relative;" onclick="history.back()">Volver</button>
+@endif
 <script>
     document.getElementById('registerPassword').addEventListener('input', function () {
         if (this.value.length > 0) {

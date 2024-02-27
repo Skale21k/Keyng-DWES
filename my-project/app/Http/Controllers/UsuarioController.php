@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\MessageBag;
+use Illuminate\Support\Facades\Redirect;
 
 
 class UsuarioController extends Controller
@@ -50,8 +52,12 @@ class UsuarioController extends Controller
         return view('usuarios.index');
     }
 
+    public function login(){
+        return view('usuarios.login');
+    }
 
-    public function login(Request $request){
+
+    public function auth(Request $request){
         //Se puede editar el tiempo que dura la sesion en el archivo .env
 
         $credenciales = $request->only('email', 'password');
@@ -61,12 +67,13 @@ class UsuarioController extends Controller
         if(Auth::attempt($credenciales, $remember)){
             //Medida de seguridad.
             $request->session()->regenerate();
-
+            session()->flash('error', "");
             return redirect()->intended(route('usuarios.index'))->with('success', "Logeado correctamente.");
         }
 
-        session()->flash('error', "Credenciales incorrectas.");
-        return view('usuarios.login');
+        $errors = new MessageBag(['password' => ['Email y/o contraseña incorrectos.']]); // if Auth::attempt fails (wrong credentials) create a new message bag instance.
+
+        return Redirect::back()->withErrors($errors)->withInput($request->except('password'));
     }
 
     public function logout(Request $request){

@@ -11,11 +11,12 @@
             <form action="{{route('carrito.add')}}" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{$producto->id}}">
-                <input type="submit" name="btn" class="btn btn-success w-100" value="Añadir al carrito">
-                @admin
-                    <button class="add">Botón de Administrador</button>
-                @endadmin
+                <input type="submit" name="btn" class="btn btn-success w-30" value="Añadir al carrito">
             </form>
+            @admin
+                <br>
+                <a href="{{ route('productos.edit', $producto) }}" class="btn btn-info">Editar Producto</a>
+            @endadmin
         </div>
 
 
