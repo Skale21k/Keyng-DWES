@@ -44,7 +44,7 @@ $rutaAction = route('usuarios.update', $usuarios);
         required @endif @endif/>
 
     </div>
-    @if(!$modoCreacion && Auth::user()->rol == "admin")
+    @if(!$modoCreacion && Auth::user()->rol == "admin" && $usuarios->id != Auth::user()->id)
         <!-- Rol input -->
         <div class="form-outline mb-4">
             <label class="form-label mb-2" for="registerRol">Rol</label>
