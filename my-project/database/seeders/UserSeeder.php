@@ -61,8 +61,8 @@ class UserSeeder extends Seeder
             ],
             [
                 'nombre' => 'Ruben Darío Soto Montaña',
-                'email' => 'darío@admin.com',
-                'password' => 'darío',
+                'email' => 'dario@admin.com',
+                'password' => 'dario',
                 'rol' => 'admin',
                 'imagen' => 'dario.jpg',
             ],
