@@ -11,13 +11,13 @@ class TicketController extends Controller
 {
     public function crearTicket(Request $request)
     {
-        // Obtener el cliente a partir del ID proporcionado en la solicitud
-        $cliente = User::findOrFail($request->cliente_id);
+        // Obtener el user a partir del ID proporcionado en la solicitud
+        $user = User::findOrFail($request->user_id);
 
         // Lógica para crear un nuevo ticket
         $ticket = Ticket::create([
             'fecha' => now(),
-            'cliente_id' => $cliente->id,
+            'user_id' => $user->id,
             'total' => $request->total, // Total de la compra
         ]);
 
@@ -31,7 +31,7 @@ class TicketController extends Controller
             ]);
         }
 
-        // Retorna la respuesta adecuada al cliente (puede ser un JSON con el número de ticket, por ejemplo)
+        // Retorna la respuesta adecuada al user (puede ser un JSON con el número de ticket, por ejemplo)
     }
 
     public function index()
@@ -45,7 +45,7 @@ class TicketController extends Controller
 
     public function obtenerTickets()
     {
-        $tickets = Ticket::with('cliente')->with('detalles')->get();
+        $tickets = Ticket::with('user')->with('detalles')->get();
         return response()->json($tickets);
     }
 }

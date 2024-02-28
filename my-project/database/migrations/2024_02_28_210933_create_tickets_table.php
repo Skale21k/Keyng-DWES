@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->dateTime('fecha');
-            $table->unsignedBigInteger('cliente_id');
+            $table->unsignedBigInteger('user_id');
             $table->decimal('total', 10, 2)->default(0);
             $table->timestamps();
 
-            $table->foreign('cliente_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

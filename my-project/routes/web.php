@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\TicketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +55,7 @@ Route::controller(CartController::class)->group(function () {
     Route::post('/cart/remove', 'remove')->name('carrito.remove')->middleware('auth');
 });
 
+//Rutas de tickets
+Route::controller(TicketController::class)->group(function () {
+    Route::get('/tickets', 'index')->name('tickets.index');
+});

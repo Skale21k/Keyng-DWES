@@ -14,14 +14,17 @@
         <p>Rol: {{ Auth::user()->rol }}</p>
     @endif
     
+    <a href="{{ route('tickets.index') }}" class="btn btn-info">Ver Mis Pedidos</a>
 
-@endif
     <a href="{{ route('usuarios.edit', Auth::user()) }}" class="btn btn-info">Editar Perfil</a>
 
-<form action="{{ route('usuarios.logout') }}" method="POST">
-    @csrf
-    <button type="submit">Cerrar sesión</button>
-</form>
+    <form action="{{ route('usuarios.logout') }}" method="POST">
+        @csrf
+        <button type="submit">Cerrar sesión</button>
+    </form>
+
+@endif
+
 
 
 @endsection

@@ -18,7 +18,7 @@ class TicketFactory extends Factory
     {
         return [
             'fecha' => $this->faker->dateTime(),
-            'cliente_id' => $this->faker->numberBetween(1, 10),
+            'user_id' => $this->faker->numberBetween(1, 10),
             'total' => $this->faker->randomFloat(2, 0, 1000),
         ];
     }

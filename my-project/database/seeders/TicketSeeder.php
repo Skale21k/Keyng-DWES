@@ -16,19 +16,19 @@ class TicketSeeder extends Seeder
         $tickets = [
             [
                 'fecha' => '2021-10-01 10:00:00',
-                'cliente_id' => 5,
+                'user_id' => 5,
             ],
             [
                 'fecha' => '2021-10-02 10:00:00',
-                'cliente_id' => 5,
+                'user_id' => 5,
             ],
             [
                 'fecha' => '2021-10-03 10:00:00',
-                'cliente_id' => 5,
+                'user_id' => 5,
             ],
             [
                 'fecha' => '2021-10-04 10:00:00',
-                'cliente_id' => 5,
+                'user_id' => 5,
             ],
             
         ];
