@@ -7,6 +7,7 @@
 
 @component('productos._components.formulario')
     @slot('producto', $producto)
+    @slot('categorias', $categorias)
 @endcomponent
 @endsection
 

@@ -6,6 +6,7 @@
 <h2>Creacion de productos</h2>
 
 @component('productos._components.formulario')
+    @slot('categorias', $categorias)
 @endcomponent
 @endsection
 

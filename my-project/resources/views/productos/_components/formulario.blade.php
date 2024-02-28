@@ -44,12 +44,11 @@
     
     <label for="categoria">Categoria</label>
     <select name="categoria" id="categoria" required>
-        <option value="Hogar" {{ (old('categoria', $producto->categoria ?? '') == 'Hogar') ? 'selected' : '' }}>Hogar</option>
-        <option value="Belleza" {{ (old('categoria', $producto->categoria ?? '') == 'Belleza') ? 'selected' : '' }}>Belleza</option>
-        <option value="Electrónica" {{ (old('categoria', $producto->categoria ?? '') == 'Electrónica') ? 'selected' : '' }}>Electrónica</option>
-        <option value="Deporte" {{ (old('categoria', $producto->categoria ?? '') == 'Deporte') ? 'selected' : '' }}>Deporte</option>
-        <option value="Moda" {{ (old('categoria', $producto->categoria ?? '') == 'Moda') ? 'selected' : '' }}>Moda</option>
-        <option value="Alimentación" {{ (old('categoria', $producto->categoria ?? '') == 'Alimentación') ? 'selected' : '' }}>Alimentación</option>
+        @foreach($categorias as $categoria)
+        <option value="{{ $categoria->id }}" {{ (old('categoria_id', $producto->categoria_id ?? '') == $categoria->id) ? 'selected' : '' }}>
+            {{ $categoria->nombre }}
+        </option>
+    @endforeach
     </select>
     <br><br>
 
