@@ -17,7 +17,9 @@ class DetalleTicketFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'ticket_id' => $this->faker->numberBetween(1, 10),
+            'producto_id' => $this->faker->numberBetween(1, 10),
+            'cantidad' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

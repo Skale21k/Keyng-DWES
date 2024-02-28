@@ -9,7 +9,7 @@ class DetalleTicket extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['ticket_id', 'producto_id', 'cantidad', 'precio_unitario'];
+    protected $fillable = ['ticket_id', 'producto_id', 'cantidad'];
 
     public function ticket()
     {

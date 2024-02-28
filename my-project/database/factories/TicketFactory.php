@@ -17,7 +17,9 @@ class TicketFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'fecha' => $this->faker->dateTime(),
+            'cliente_id' => $this->faker->numberBetween(1, 10),
+            'total' => $this->faker->randomFloat(2, 0, 1000),
         ];
     }
 }

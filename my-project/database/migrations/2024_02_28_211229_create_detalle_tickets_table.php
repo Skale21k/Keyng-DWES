@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('ticket_id');
             $table->unsignedBigInteger('producto_id');
             $table->integer('cantidad');
-            $table->decimal('precio_unitario', 10, 2);
             $table->timestamps();
 
             $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
