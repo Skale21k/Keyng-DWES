@@ -21,7 +21,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 599.99,
                 'unidades' => 20,
                 'imagen' => 'televisor.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Lavadora 8Kg',
@@ -29,7 +29,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 349.99,
                 'unidades' => 15,
                 'imagen' => 'lavadora.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Cafetera Express',
@@ -37,7 +37,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 89.99,
                 'unidades' => 30,
                 'imagen' => 'cafetera.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Aceite de oliva virgen extra 1L',
@@ -45,7 +45,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 7.99,
                 'unidades' => 200,
                 'imagen' => 'aceite.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '11',
             ],
             [
                 'nombre' => 'Licuadora de Frutas y Verduras',
@@ -53,7 +53,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 45.99,
                 'unidades' => 25,
                 'imagen' => 'licuadora.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Arroz Basmati 1Kg',
@@ -61,7 +61,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 3.99,
                 'unidades' => 150,
                 'imagen' => 'arroz.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '11',
             ],
             [
                 'nombre' => 'Tostadora de Pan',
@@ -69,7 +69,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 22.99,
                 'unidades' => 30,
                 'imagen' => 'tostadora.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Pasta Integral 500g',
@@ -77,7 +77,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 1.99,
                 'unidades' => 200,
                 'imagen' => 'pasta.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '11',
             ],
             [
                 'nombre' => 'Batidora de Mano',
@@ -85,7 +85,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 29.99,
                 'unidades' => 20,
                 'imagen' => 'batidora.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Atún en Aceite 160g',
@@ -93,7 +93,7 @@ class ProductoSeeder extends Seeder
                 'precio' =>1.49,
                 'unidades' => 100,
                 'imagen' => 'atun.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '11',
             ],
             [
                 'nombre' => 'Robot de Cocina Multifunción',
@@ -101,7 +101,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 249.99,
                 'unidades' => 10,
                 'imagen' => 'robot_cocina.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Colchón Viscoelástico 150x200cm',
@@ -109,7 +109,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 399.99,
                 'unidades' => 20,
                 'imagen' => 'colchon.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Gafas de Sol Polarizadas',
@@ -117,7 +117,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 59.99,
                 'unidades' => 30,
                 'imagen' => 'gafas_sol.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Manta Eléctrica',
@@ -125,7 +125,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 49.99,
                 'unidades' => 25,
                 'imagen' => 'manta.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Perfume para Hombre 100ml',
@@ -133,7 +133,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 79.99,
                 'unidades' => 40,
                 'imagen' => 'perfume_hombre.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Mochila Portátil 15.6"',
@@ -141,7 +141,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 39.99,
                 'unidades' => 50,
                 'imagen' => 'mochila.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Zapatillas Deportivas Mujer',
@@ -149,7 +149,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 69.99,
                 'unidades' => 35,
                 'imagen' => 'zapatillas_mujer.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Máquina de Afeitar Eléctrica',
@@ -157,7 +157,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 89.99,
                 'unidades' => 20,
                 'imagen' => 'afeitadora.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Teclado Mecánico para Gaming',
@@ -165,7 +165,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 129.99,
                 'unidades' => 15,
                 'imagen' => 'teclado_gaming.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Cámara de Seguridad WiFi',
@@ -173,7 +173,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 79.99,
                 'unidades' => 25,
                 'imagen' => 'camara_seguridad.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Secadora de Ropa 10Kg',
@@ -181,7 +181,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 499.99,
                 'unidades' => 10,
                 'imagen' => 'secadora.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Sartén Antiadherente 24cm',
@@ -189,7 +189,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 29.99,
                 'unidades' => 50,
                 'imagen' => 'sarten.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Juego de Cuchillos de Cocina',
@@ -197,7 +197,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 39.99,
                 'unidades' => 40,
                 'imagen' => 'cuchillos.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Vino Tinto Reserva 750ml',
@@ -205,14 +205,14 @@ class ProductoSeeder extends Seeder
                 'precio' => 19.99,
                 'unidades' => 60,
                 'imagen' => 'vino.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '11',
             ], [
                 'nombre' => 'Aspiradora sin Bolsa',
                 'descripcion' => 'Aspiradora sin bolsa con tecnología ciclónica y filtro HEPA',
                 'precio' => 149.99,
                 'unidades' => 20,
                 'imagen' => 'aspiradora.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Smartwatch Fitness',
@@ -220,7 +220,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 129.99,
                 'unidades' => 30,
                 'imagen' => 'smartwatch.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Maleta de Viaje Grande',
@@ -228,7 +228,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 89.99,
                 'unidades' => 25,
                 'imagen' => 'maleta.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Cafetera de Goteo Programable',
@@ -236,7 +236,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 59.99,
                 'unidades' => 15,
                 'imagen' => 'cafetera_goteo.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Monitor Curvo 27"',
@@ -244,7 +244,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 349.99,
                 'unidades' => 10,
                 'imagen' => 'monitor_curvo.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Batería Externa Portátil 20000mAh',
@@ -252,7 +252,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 39.99,
                 'unidades' => 40,
                 'imagen' => 'bateria_portatil.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Set de Té Verde',
@@ -260,7 +260,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 24.99,
                 'unidades' => 50,
                 'imagen' => 'te_verde.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '11',
             ],
             [
                 'nombre' => 'Reloj de Pared Moderno',
@@ -268,7 +268,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 19.99,
                 'unidades' => 60,
                 'imagen' => 'reloj_pared.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Funda Nórdica 150x200cm',
@@ -276,7 +276,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 29.99,
                 'unidades' => 30,
                 'imagen' => 'funda_nordica.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Altavoz Bluetooth Impermeable',
@@ -284,7 +284,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 69.99,
                 'unidades' => 25,
                 'imagen' => 'altavoz_bluetooth.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Cepillo de Dientes Eléctrico',
@@ -292,7 +292,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 49.99,
                 'unidades' => 35,
                 'imagen' => 'cepillo_dientes.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Mesa de Centro de Cristal',
@@ -300,7 +300,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 129.99,
                 'unidades' => 20,
                 'imagen' => 'mesa_centro.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Lámpara de Pie LED',
@@ -308,7 +308,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 79.99,
                 'unidades' => 30,
                 'imagen' => 'lampara_pie.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Ebook Reader 6"',
@@ -316,7 +316,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 99.99,
                 'unidades' => 40,
                 'imagen' => 'ebook_reader.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Set de Brochas de Maquillaje',
@@ -324,7 +324,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 24.99,
                 'unidades' => 50,
                 'imagen' => 'brochas_maquillaje.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Soporte para Portátil Ajustable',
@@ -332,7 +332,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 34.99,
                 'unidades' => 40,
                 'imagen' => 'soporte_portatil.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '1',
             ],
             [
                 'nombre' => 'Báscula Digital de Cocina',
@@ -340,7 +340,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 19.99,
                 'unidades' => 50,
                 'imagen' => 'bascula_cocina.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Pelota de Fútbol Adidas',
@@ -348,7 +348,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 29.99,
                 'unidades' => 30,
                 'imagen' => 'pelota_futbol.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '3',
             ],
             [
                 'nombre' => 'Silla Ergonómica de Oficina',
@@ -356,7 +356,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 199.99,
                 'unidades' => 20,
                 'imagen' => 'silla_oficina.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Gorra de Béisbol',
@@ -364,7 +364,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 14.99,
                 'unidades' => 60,
                 'imagen' => 'gorra.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Mochila de Senderismo 40L',
@@ -372,7 +372,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 49.99,
                 'unidades' => 30,
                 'imagen' => 'mochila_senderismo.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '4',
             ],
             [
                 'nombre' => 'Balón de Baloncesto Spalding',
@@ -380,7 +380,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 29.99,
                 'unidades' => 40,
                 'imagen' => 'balon_baloncesto.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '3',
             ],
             [
                 'nombre' => 'Raqueta de Tenis Wilson',
@@ -388,7 +388,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 89.99,
                 'unidades' => 20,
                 'imagen' => 'raqueta_tenis.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '3',
             ],
             [
                 'nombre' => 'Kuki',
@@ -396,7 +396,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 9999.99,
                 'unidades' =>1,
                 'imagen' => 'kuki.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
             [
                 'nombre' => 'Kuki Sentao',
@@ -404,12 +404,13 @@ class ProductoSeeder extends Seeder
                 'precio' => 9999.99,
                 'unidades' =>1,
                 'imagen' => 'kuki_sentao.jpg',
-                'categoria_id' => rand(1,5),
+                'categoria_id' => '2',
             ],
 
 
             
         ];
+
 
         foreach ($productos as $producto) {
             Producto::create($producto);

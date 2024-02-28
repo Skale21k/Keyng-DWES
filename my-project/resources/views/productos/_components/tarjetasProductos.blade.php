@@ -4,7 +4,7 @@
             <img src="{{ $producto->imagen_url }}" alt="{{ $producto->nombre }}" class="imgDetalle" />
         </div>
         <div class="product" style="left: 700px; top:200px">
-            <p>{{ $producto->categoria }}</p>
+            <p>{{ $producto->categoria->nombre }}</p>
             <h1>{{ $producto->nombre }}</h1>
             <h2>{{ $producto->precio }}€</h2>
             <p class="desc">{{ $producto->descripcion }}</p>
