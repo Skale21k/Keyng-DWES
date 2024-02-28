@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Producto>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categoria>
  */
-class ProductoFactory extends Factory
+class CategoriaFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,10 +19,6 @@ class ProductoFactory extends Factory
         return [
             'nombre' => $this->faker->word(),
             'descripcion' => $this->faker->paragraph(),
-            'precio' => $this->faker->numberBetween(1, 99),
-            'unidades' => $this->faker->numberBetween(1, 99),
-            'imagen' => $this->faker->imageUrl(),
-            'categoria' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

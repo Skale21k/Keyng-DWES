@@ -17,11 +17,16 @@ class Producto extends Model
         'precio',
         'unidades',
         'imagen',
-        'categoria'
+        'categoria',
     ];
 
     public function getImagenUrlAttribute()
     {
         return Storage::url('img/' . $this->imagen);
+    }
+
+    public function categoria(){
+        //return $this->belongsTo(Categoria::class);
+        return $this->belongsTo('App\Models\Categoria');
     }
 }
