@@ -20,10 +20,4 @@
         </div>
     @endforeach
 
-    <div class="direction">
-        <button id="prev">&lt;</button>
-        <button id="next">&gt;</button>
-    </div>
-
-    <script src="{{ asset('assets/js/destacados.js') }}"></script>
 @endsection
