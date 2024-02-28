@@ -22,7 +22,7 @@ class HomeController extends Controller
                 ->where('productos.categoria_id', $categoria->id)
                 ->groupBy('productos.id', 'productos.nombre', 'productos.descripcion', 'productos.precio', 'productos.unidades', 'productos.imagen', 'productos.categoria_id', 'productos.created_at', 'productos.updated_at')
                 ->orderBy('total_ventas', 'desc')
-                ->take(5)
+                ->take(4)
                 ->get();
         }
 
