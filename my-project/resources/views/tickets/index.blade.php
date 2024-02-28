@@ -10,12 +10,13 @@
         No tienes pedidos.
     </div>
     @else
+    @php $pedidoNumero = 1 @endphp
     <div class="row">
         @foreach($tickets as $ticket)
         <div class="col-md-6 mb-4">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h5 class="card-title mb-0">Pedido #{{ $ticket->id }}</h5>
+                    <h5 class="card-title mb-0">Pedido #{{ $pedidoNumero++ }}</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text"><strong>Total:</strong> ${{ $ticket->total }}</p>
@@ -37,4 +38,5 @@
     </div>
     @endif
 </div>
+<a onclick="history.back()" class="btn btn-primary">Volver</a>
 @endsection

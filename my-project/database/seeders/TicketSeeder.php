@@ -24,7 +24,7 @@ class TicketSeeder extends Seeder
             ],
             [
                 'fecha' => '2021-10-03 10:00:00',
-                'user_id' => 5,
+                'user_id' => 3,
             ],
             [
                 'fecha' => '2021-10-04 10:00:00',
