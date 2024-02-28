@@ -41,7 +41,7 @@ class ProductoController extends Controller
         $producto->precio = $request->precio;
         $producto->unidades = $request->unidades;
         $producto->imagen = $nombreImagen; // Guarda la ruta de la imagen en el campo 'imagen'
-        $producto->categoria = $request->categoria;
+        $producto->categoria_id = $request->categoria;
 
         $producto->save();
 
