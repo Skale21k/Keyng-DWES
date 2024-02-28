@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DetalleTicket;
+use App\Events\DetalleTicketSaved;
 
 class DetalleTicketController extends Controller
 {
@@ -24,4 +25,5 @@ class DetalleTicketController extends Controller
         $detalles = DetalleTicket::with('ticket')->with('producto')->get();
         return response()->json($detalles);
     }
+
 }

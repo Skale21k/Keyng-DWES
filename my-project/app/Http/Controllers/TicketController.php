@@ -34,6 +34,15 @@ class TicketController extends Controller
         // Retorna la respuesta adecuada al cliente (puede ser un JSON con el número de ticket, por ejemplo)
     }
 
+    public function index()
+    {
+        // Recuperar todos los tickets del usuario actual
+        $tickets = auth()->user()->tickets;
+
+        // Pasar los tickets a la vista
+        return view('tickets.index', compact('tickets'));
+    }
+
     public function obtenerTickets()
     {
         $tickets = Ticket::with('cliente')->with('detalles')->get();

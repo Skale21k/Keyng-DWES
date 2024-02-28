@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\DetalleTicket;
 
 class TicketSeeder extends Seeder
 {
@@ -16,24 +17,34 @@ class TicketSeeder extends Seeder
             [
                 'fecha' => '2021-10-01 10:00:00',
                 'cliente_id' => 5,
-                'total' => 100
             ],
             [
                 'fecha' => '2021-10-02 10:00:00',
                 'cliente_id' => 5,
-                'total' => 200
             ],
             [
                 'fecha' => '2021-10-03 10:00:00',
                 'cliente_id' => 5,
-                'total' => 300
             ],
             [
                 'fecha' => '2021-10-04 10:00:00',
                 'cliente_id' => 5,
-                'total' => 400
             ],
             
         ];
+
+        $detalles = DetalleTicket::all();
+
+        foreach ($tickets as $ticket) {
+            foreach ($detalles as $detalle) {
+                $ticket = $detalle->ticket;
+                $total = $ticket->detalles->sum(function($detalle) {
+                    return $detalle->producto->precio;
+                });
+                $ticket->total = $total;
+                $ticket->save();
+            }
+            \App\Models\Ticket::create($ticket);
+        }
     }
 }

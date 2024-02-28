@@ -1,7 +1,12 @@
+<?php
 
 namespace App\Events;
 
+use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 use App\Models\Ticket;
@@ -9,8 +14,7 @@ use App\Models\Ticket;
 class DetalleTicketSaved
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
-    protected $detalleTicket;
+    public $detalleTicket;
 
     public function __construct($detalleTicket)
     {
@@ -27,5 +31,11 @@ class DetalleTicketSaved
 
         $ticket->total = $total;
         $ticket->save();
+    }
+    public function broadcastOn(): array
+    {
+        return [
+            new PrivateChannel('channel-name'),
+        ];
     }
 }

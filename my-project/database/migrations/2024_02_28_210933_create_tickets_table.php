@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->dateTime('fecha');
             $table->unsignedBigInteger('cliente_id');
-            $table->decimal('total', 10, 2);
+            $table->decimal('total', 10, 2)->default(0);
             $table->timestamps();
 
             $table->foreign('cliente_id')->references('id')->on('users')->onDelete('cascade');

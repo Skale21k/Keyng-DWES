@@ -39,5 +39,9 @@ class DetalleTicketSeeder extends Seeder
                 'cantidad' => 2,
             ],
         ];
+
+        foreach ($detallesTicket as $detalleTicket) {
+            \App\Models\DetalleTicket::create($detalleTicket);
+        }
     }
 }
