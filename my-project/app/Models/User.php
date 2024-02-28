@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
+
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
@@ -35,5 +36,10 @@ class User extends Authenticatable
     public function getImagenUrlAttribute()
     {
         return Storage::url('img/' . $this->imagen);
+    }
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
     }
 }

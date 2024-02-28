@@ -29,4 +29,9 @@ class Producto extends Model
         //return $this->belongsTo(Categoria::class);
         return $this->belongsTo('App\Models\Categoria');
     }
+
+    public function detallesTicket()
+    {
+        return $this->hasMany('App\Models\DetalleTicket');
+    }
 }
