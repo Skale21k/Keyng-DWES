@@ -10,21 +10,23 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+
     public function __invoke()
     {
-        // Obtener las categorías
-        $productosMasVendidos = DetalleTicket::select('producto_id', DB::raw('SUM(cantidad) as total_vendido'))
-        ->groupBy('producto_id')
-        ->orderByDesc('total_vendido')
-        ->take(5) // Obtener los 5 productos más vendidos
-        ->get();
+        $categorias = Categoria::all();
+        $productosPorCategoria = [];
 
-        $productosIds = $productosMasVendidos->pluck('producto_id');
-        $productos = Producto::whereIn('id', $productosIds)->get();
+        foreach ($categorias as $categoria) {
+            $productosPorCategoria[$categoria->nombre] = Producto::join('detalle_tickets', 'productos.id', '=', 'detalle_tickets.producto_id')
+                ->select('productos.*', DB::raw('SUM(detalle_tickets.cantidad) as total_ventas'))
+                ->where('productos.categoria_id', $categoria->id)
+                ->groupBy('productos.id', 'productos.nombre', 'productos.descripcion', 'productos.precio', 'productos.unidades', 'productos.imagen', 'productos.categoria_id', 'productos.created_at', 'productos.updated_at')
+                ->orderBy('total_ventas', 'desc')
+                ->take(5)
+                ->get();
+        }
 
-        return view('home', [
-            'productosMasVendidos' => $productos,
-
-        ]);
+        return view('home', ['productosPorCategoria' => $productosPorCategoria]);
     }
+
 }
