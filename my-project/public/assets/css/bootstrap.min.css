@@ -2368,13 +2368,13 @@ select.form-control-lg:not([size]):not([multiple]) {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #535353;
+    border-color: #424242;
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #333333;
+    border-color: #242424;
 }
 .btn-primary.focus,
 .btn-primary:focus {
@@ -3644,7 +3644,7 @@ tbody.collapse.show {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #007bff;
+    background-color: #535353;
 }
 .nav-fill .nav-item {
     -webkit-box-flex: 1;
