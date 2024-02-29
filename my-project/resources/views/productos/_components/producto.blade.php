@@ -58,7 +58,8 @@
                                                         <span class="input-group-btn">
                                                             <button type="button"
                                                                 class="quantity-right-plus btn btn-success btn-number"
-                                                                data-type="plus">
+                                                                data-type="plus"
+                                                                data-unidades="{{$producto->unidades}}">
                                                                 <svg width="16" height="16">
                                                                     <use xlink:href="#plus"></use>
                                                                 </svg>
@@ -90,7 +91,7 @@
                     e.preventDefault();
                     var quantityInput = $(this).closest('.product-item').find('.input-number');
                     var quantity = parseInt(quantityInput.val());
-                    var cantidadUnidades = {{$producto->unidades}};
+                    var cantidadUnidades = $(this).data('unidades'); // Obtén las unidades del producto correcto
                     if(quantity < cantidadUnidades){
                         quantityInput.val(quantity + 1);
                     }
@@ -105,6 +106,7 @@
                     }
 
                 });
+            });
         </script>
 
     </section>

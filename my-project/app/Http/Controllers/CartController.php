@@ -13,10 +13,20 @@ class CartController extends Controller
 {
     public function add(Request $request){
         $producto = Producto::find($request->id);
-        if($request->quantity[$producto->id] > $producto->unidades){
-            $errors = new MessageBag(['unidades' => ['No existen esas unidades para el producto actualmente, lo sentimos.']]);
-            return Redirect::back()->withErrors($errors);
-        }
+        
+ // Busca el producto en el carrito
+$cartItem = Cart::search(function ($cartItem, $rowId) use ($producto) {
+    return $cartItem->id === $producto->id;
+})->first();
+
+// Si el producto ya está en el carrito, obtén su cantidad
+$cantidadCarrito = $cartItem ? $cartItem->qty : 0;
+
+$cantidadTotal = $cantidadCarrito + $request->quantity[$producto->id];
+if($cantidadTotal > $producto->unidades){
+    $errors = new MessageBag(['unidades' => ['No existen esas unidades para el producto actualmente, lo sentimos.']]);
+    return Redirect::back()->withErrors($errors);
+}
         if(isset($request->quantity[$producto->id])){
             $qty = $request->quantity[$producto->id];
         } else{
