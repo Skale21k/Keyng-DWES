@@ -40,7 +40,13 @@ class CartController extends Controller
             return Redirect::back()->withErrors($errors);
         }
 
-        Cart::add($producto->id, $producto->nombre, $qty, $producto->precio);
+        Cart::add([
+            'id' => $producto->id,
+            'name' => $producto->nombre,
+            'price' => $producto->precio,
+            'qty' => $qty,
+            'options' => ['imagen' => $producto->imagen_url]
+        ]);
 
         return Redirect::back()->with('message', 'Producto añadido al carrito correctamente.');
     }
