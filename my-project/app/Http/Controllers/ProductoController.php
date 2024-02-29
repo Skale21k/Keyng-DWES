@@ -10,7 +10,7 @@ use App\Models\Categoria;
 class ProductoController extends Controller
 {
     public function index(){
-        $productos = Producto::paginate(12);
+        $productos = Producto::where('unidades', '>=', 1)->paginate(12);
         $categorias = Categoria::all();
         return view('productos.index', compact('productos', 'categorias'));
     }
