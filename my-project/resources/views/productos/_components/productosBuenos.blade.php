@@ -36,7 +36,7 @@
                             </svg>
                         </button>
                     </span>
-                </div>asdas
+                </div>
                 <input type="hidden" name="id" value="{{$producto->id}}">
                 <input type="submit" name="btn" class="btn btn-success w-10"
                     value="Añadir al carrito">
