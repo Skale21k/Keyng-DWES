@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use PayPal\Api\Payer;
 use PayPal\Api\Amount;
 use PayPal\Api\Payment;
+use PayPal\Api\PaymentExecution;
 use PayPal\Api\Transaction;
 use PayPal\Rest\ApiContext;
 use Illuminate\Http\Request;
@@ -12,6 +13,7 @@ use PayPal\Api\RedirectUrls;
 use PayPal\Auth\OAuthTokenCredential;
 use Illuminate\Support\Facades\Config;
 use PayPal\Exception\PayPalConnectionException;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class PaypalController extends Controller
 {
@@ -60,12 +62,35 @@ class PaypalController extends Controller
            return redirect()->away($payment->getApprovalLink());
         }
         catch (PayPalConnectionException $ex){
-            $data =  $ex->getData();
+            echo  $ex->getData();
         }
 
     }
 
     public function status(Request $request){
-        dd($request->all());
+        $paymentId = $request->input('paymentId');
+        $payerId = $request->input('PayerID');
+        $token = $request->input('token');
+
+        if(!$payerId || !$paymentId || !$token){
+            $status = "Hubo un error con el pago";
+            return redirect('/cart/checkout')->with($status);;
+        }
+
+        $payment= Payment::get($paymentId, $this->apiContext);
+
+        $execution = new PaymentExecution();
+        $execution->setPayerId($payerId);
+
+        //Se ejecuta el pago
+        $result = $payment->execute($execution, $this->apiContext);
+
+        if($result->getState() === 'approved'){
+            Cart::destroy();
+            return redirect("/")->with('success', "Pago realizado correctamente, gracias.");
+        }
+
+        $status = "Lo sentimos, no se ha podido realizar el pago";
+        return redirect("/checkout");
     }
 }

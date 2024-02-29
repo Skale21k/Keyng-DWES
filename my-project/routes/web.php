@@ -57,6 +57,6 @@ Route::controller(CartController::class)->group(function () {
 
 //Rutas de paypal
 Route::controller(PaypalController::class)->group(function () {
-    Route::post('/paypal/pay', 'pagoPayPal')->name('pago.paypal');
-    Route::get('/paypal/status', 'status')->name('pago.status');
+    Route::post('/paypal/pay', 'pagoPayPal')->name('pagos.paypal');
+    Route::get('/paypal/status', 'status')->name('pagos.status');
 });

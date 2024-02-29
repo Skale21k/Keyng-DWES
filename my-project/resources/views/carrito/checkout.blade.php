@@ -49,7 +49,7 @@
                 </tbody>
             </table>
             <a href="{{route("carrito.clear")}}" class="btn btn-outline-danger">Vaciar carrito</a>
-            <form action="{{route("pago.paypal")}}" method="post">
+            <form action="{{route("pagos.paypal")}}" method="post">
                 @csrf
                 <input type="hidden" name="total" value="{{Cart::total()}}">
                 <input type="hidden" name="productos" value="{{Cart::content()}}">
