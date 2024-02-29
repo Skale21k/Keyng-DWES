@@ -33,19 +33,6 @@
                         <td class="text-end">Subtotal</td>
                         <td class="text-end">{{Cart::subtotal()}}</td>
                         <td ></td>
-                    </tr>
-                    <tr class="fw-bolder">
-                        <td colspan="3"></td>
-                        <td class="text-end">Impuestos</td>
-                        <td class="text-end">{{Cart::tax()}}</td>
-                        <td ></td>
-                    </tr>
-                    <tr class="fw-bolder">
-                        <td colspan="3"></td>
-                        <td class="text-end">Total</td>
-                        <td class="text-end">{{Cart::total()}}</td>
-                        <td ></td>
-                    </tr>
                 </tbody>
             </table>
             <a href="{{route("carrito.clear")}}" class="btn btn-outline-danger">Vaciar carrito</a>
