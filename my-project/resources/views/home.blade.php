@@ -31,9 +31,12 @@
         <div id="formList">
             <div id="list">
                 @foreach ($productos as $producto)
+                @if($producto->unidades >= 1)
                     @component('productos._components.productosBuenos', ['producto' => $producto])
                     @endcomponent
+                @endif
                 @endforeach
+
             </div>
         </div>
     @endforeach

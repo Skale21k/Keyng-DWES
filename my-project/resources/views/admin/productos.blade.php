@@ -14,7 +14,7 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody> 
+        <tbody>
             @foreach($productos as $producto)
                 <tr>
                     <td><img src="{{$producto->imagen_url}}" alt="{{ $producto->nombre }}" width="60"></td>
@@ -32,4 +32,5 @@
             @endforeach
         </tbody>
     </table>
+    <nav class="paginateNav">   {{ $productos->links() }} </nav>
 @endsection

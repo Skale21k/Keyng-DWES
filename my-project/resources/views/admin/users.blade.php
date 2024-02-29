@@ -29,6 +29,8 @@
                         </form>
                 </tr>
             @endforeach
+
         </tbody>
     </table>
+    <nav class="paginateNav">   {{ $users->links() }} </nav>
 @endsection

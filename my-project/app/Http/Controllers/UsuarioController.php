@@ -89,7 +89,7 @@ class UsuarioController extends Controller
     }
 
     public function verUsuarios(){
-        $users = User::all();
+        $users = User::paginate(15);
         return view('admin.users', compact('users'));
     }
 
@@ -105,7 +105,7 @@ class UsuarioController extends Controller
         }else{
             return redirect()->route('usuarios.index')->with('error', "No puedes editar a otro usuario.");
         }
-        
+
     }
 
     public function update(User $usuario, Request $request){

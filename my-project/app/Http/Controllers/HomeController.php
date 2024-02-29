@@ -20,6 +20,7 @@ class HomeController extends Controller
             $productosPorCategoria[$categoria->nombre] = Producto::join('detalle_tickets', 'productos.id', '=', 'detalle_tickets.producto_id')
                 ->select('productos.*', DB::raw('SUM(detalle_tickets.cantidad) as total_ventas'))
                 ->where('productos.categoria_id', $categoria->id)
+                ->where('productos.unidades', '>=', 1)
                 ->groupBy('productos.id', 'productos.nombre', 'productos.descripcion', 'productos.precio', 'productos.unidades', 'productos.imagen', 'productos.categoria_id', 'productos.created_at', 'productos.updated_at')
                 ->orderBy('total_ventas', 'desc')
                 ->take(4)
