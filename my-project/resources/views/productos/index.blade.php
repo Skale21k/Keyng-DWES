@@ -5,5 +5,7 @@
 
 @section('content')
 @component('productos._components.producto', ['productos' => $productos])
-    @endcomponent
+@endcomponent
+@component('productos._components.menuLateral', ['categorias' => $categorias])
+@endcomponent
 @endsection
