@@ -749,3 +749,7 @@ h6 {
 #tituloCat {
     margin-left: 300px;
 }
+
+#cantidadInput{
+    text-align: center;
+}
