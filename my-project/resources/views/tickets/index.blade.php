@@ -16,18 +16,19 @@
         <div class="col-md-6 mb-4">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h5 class="card-title mb-0">Pedido #{{ $pedidoNumero++ }}</h5>
+                    <h5 class="card-title mb-0">Pedido Nº{{ $pedidoNumero++ }}</h5>
                 </div>
                 <div class="card-body">
-                    <p class="card-text"><strong>Total:</strong> ${{ $ticket->total }}</p>
+                    <p class="card-text"><strong>Fecha de compra:</strong> {{ $ticket->fecha }}</p>
+                    <p class="card-text"><strong>Total:</strong> {{ $ticket->total }} €</p>
                     <h6 class="card-subtitle mb-2 text-muted">Detalles:</h6>
                     <ul class="list-group list-group-flush">
                         @foreach($ticket->detalles as $detalle)
                         <li class="list-group-item">
                             <h6 class="mb-0">{{ $detalle->producto->nombre }}</h6>
                             <p class="mb-1">Cantidad: {{ $detalle->cantidad }}</p>
-                            <p class="mb-1">Precio unitario: ${{ $detalle->producto->precio }}</p>
-                            <p class="mb-0">Subtotal: ${{ $detalle->cantidad * $detalle->producto->precio }}</p>
+                            <p class="mb-1">Precio unitario: {{ $detalle->producto->precio }} €</p>
+                            <p class="mb-0">Subtotal: {{ $detalle->cantidad * $detalle->producto->precio }} €</p>
                         </li>
                         @endforeach
                     </ul>

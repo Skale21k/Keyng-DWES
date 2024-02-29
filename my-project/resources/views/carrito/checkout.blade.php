@@ -18,8 +18,8 @@
                             <td><img src="{{$producto->options->imagen}}" width="150"></td>
                             <td>{{$producto->name}}</td>
                             <td>{{$producto->qty}}</td>
-                            <td>{{number_format($producto->price, 2)}}</td>
-                            <td>{{number_format($producto->qty * $producto->price, 2)}}</td>
+                            <td>{{number_format($producto->price, 2)}} €</td>
+                            <td>{{number_format($producto->qty * $producto->price, 2)}} €</td>
                             <td>
                                 <form action="{{route("carrito.remove")}}" method="post">
                                     @csrf
@@ -30,8 +30,8 @@
                     @endforeach
                     <tr class="fw-bolder">
                         <td colspan="3"></td>
-                        <td class="text-end">Subtotal</td>
-                        <td class="text-end">{{Cart::subtotal()}}</td>
+                        <td class="text-end">Total: </td>
+                        <td class="text-end">{{Cart::subtotal()}} €</td>
                         <td ></td>
                 </tbody>
             </table>
