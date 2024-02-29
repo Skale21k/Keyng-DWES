@@ -51,7 +51,7 @@
         
         git clone https://github.com/Skale21k/Keyng-DWES
 
-3. Ahora toca darle los ficheros de configuración, para ello descarga el fichero de este <a href="https://mega.nz/file/7zJ2yTDC#gxnB78BE2U_6rZIULSLw13sNODwS_7i4JHZ3z8mT1nQ">enlace</a>, y mueve el fichero .env a la misma carpeta en la que está el fichero llamado <i>docker-compose.yml</i>, y dentro de my-project mueve la carpeta vendor y el fichero .env(DENTRO DE my-project) <b>SE TIENE QUE LLAMAR .ENV, EL CONTENIDO DEL PARÉNTESIS ES SOLO UN DISTINTIVO.</b>
+3. Ahora toca darle los ficheros de configuración, para ello descarga el fichero de este <a href="https://mega.nz/file/DmJUBD5B#gYiI8gP2A7Luo3ji5iss28XpjHpMnywmTFP3knram38">enlace</a>, y mueve el fichero .env a la misma carpeta en la que está el fichero llamado <i>docker-compose.yml</i>, y dentro de my-project mueve la carpeta vendor y el fichero .env(DENTRO DE my-project) <b>SE TIENE QUE LLAMAR .ENV, EL CONTENIDO DEL PARÉNTESIS ES SOLO UN DISTINTIVO.</b>
 
 4. Una vez metidos los ficheros de configuarción, solo toca entrar en la carpeta e inicia el docker (<a href="https://docs.docker.com/desktop/">Instalación de Docker</a>).
    
