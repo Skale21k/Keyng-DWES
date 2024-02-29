@@ -1,6 +1,6 @@
 # Keyng - Análisis
 #### Alexandru Alin Olaru, Darío Soto Montaña, Sergio Kossowski, Alexandar Svetlinov
-Versión 1.0
+Versión 1.1
 # Table of Contents
 1. [Descripción del problema](analisis/descripcion.md)
 2. [Estudio del mercado de otras soluciones](analisis/estudio.md)

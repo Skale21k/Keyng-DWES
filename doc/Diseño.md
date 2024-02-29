@@ -1,6 +1,6 @@
 # Keyng - Diseño
 #### Alexandru Alin Olaru, Darío Soto Montaña, Sergio Kossowski, Alexandar Svetlinov
-Versión 1.1
+Versión 1.2
 # Table of Contents
 1. [Justificación de la solución](diseño/justificacion.md)
 2. [Diseño Arquitectónico](diseño/arquitectura.md)
