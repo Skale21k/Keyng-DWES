@@ -532,6 +532,7 @@ h1,h2,h3,h4,h5,h6 {
   background: white;
   border-radius: 12px;
   text-align: center;
+
 }
 .product-item figure img {
   max-height: 210px;
@@ -583,7 +584,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #222222;
 }
 .product-item .product-qty {
-  width: 85px;
+  width: 100px;
 }
 .product-item .btn-link {
   text-decoration: none;
