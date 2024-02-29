@@ -51,13 +51,19 @@
         
         git clone https://github.com/Skale21k/Keyng-DWES
 
-3. Ahora toca darle los ficheros de configuración, para ello descarga el fichero de este <a href="https://mega.nz/file/K7pxxAQT#1cEl5mTMiZWui-uktJnGcw62XbQYoPsCd0DFx5umH-o">enlace</a>, y mueve el fichero .env a la misma carpeta en la que está el fichero llamado <i>docker-compose.yml</i>, y dentro de my-project mueve la carpeta vendor y el fichero .env(DENTRO DE my-project) <b>SE TIENE QUE LLAMAR .ENV, EL CONTENIDO DEL PARÉNTESIS ES SOLO UN DISTINTIVO.</b>
+3. Ahora toca darle los ficheros de configuración, para ello descarga el fichero de este <a href="https://mega.nz/file/7zJ2yTDC#gxnB78BE2U_6rZIULSLw13sNODwS_7i4JHZ3z8mT1nQ">enlace</a>, y mueve el fichero .env a la misma carpeta en la que está el fichero llamado <i>docker-compose.yml</i>, y dentro de my-project mueve la carpeta vendor y el fichero .env(DENTRO DE my-project) <b>SE TIENE QUE LLAMAR .ENV, EL CONTENIDO DEL PARÉNTESIS ES SOLO UN DISTINTIVO.</b>
 
 4. Una vez metidos los ficheros de configuarción, solo toca entrar en la carpeta e inicia el docker (<a href="https://docs.docker.com/desktop/">Instalación de Docker</a>).
    
         docker compose up -d
 
-5. Entra en http://localhost:8000 para ver el proyecto.
+5. Bien, ahora toca crear las migraciones y establecer el enlace para las imágenes, para ello, debemos acceder a la terminal de nuestro contenedor Laravel, esto se puede conseguir mediante la <a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">extensión oficial de Microsoft</a>. Una vez instalada la extensión, nos dirigimos a ella, y le damos click derecho al contenedor de Laravel, presionamos "Attach Shell" y se nos debería abrir una terminal abajo. En esta terminal, tendremos que escribir los siguientes dos comandos:
+
+        php artisan migrate:fresh --seed
+
+        php artisan storage:link
+
+6. Entra en http://localhost:8000 para ver el proyecto.
 ---
 <div style="display: flex;">
     <img src="https://media.discordapp.net/attachments/1194692021600927868/1202679473246568518/image-removebg-preview.png?ex=65ce558b&is=65bbe08b&hm=4386993c6f222dbabdde435f225ded5fbace4391f3392c4ed211c75f3421392d&=&format=webp&quality=lossless" width="150" style="margin-left: -20px;"><br>
