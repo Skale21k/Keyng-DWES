@@ -29,7 +29,7 @@ class PaypalController extends Controller
     }
 
     public function pagoPayPal(Request $request){
-        $total = $request->total;
+        $total = (float)$request->total;
 
         $payer = new Payer();
         $payer->setPaymentMethod('paypal');
@@ -40,11 +40,12 @@ class PaypalController extends Controller
 
         $transaction = new Transaction();
         $transaction->setAmount($amount);
-        $transaction->setDescription('Aquí saldrían los productos pero son un coñazo.');
+
+        $callbackUrl=url("/paypal/status");
 
         $redirectUrl = new RedirectUrls();
-        $redirectUrl->setReturnUrl("https://example.com/your_redirect_url.html")
-            ->setCancelUrl("https://example.com");
+        $redirectUrl->setReturnUrl($callbackUrl)
+            ->setCancelUrl($callbackUrl);
 
         $payment = new Payment();
         $payment->setIntent('sale')
@@ -52,16 +53,19 @@ class PaypalController extends Controller
             ->setTransactions(array($transaction))
             ->setRedirectUrls($redirectUrl);
 
-
         try{
             $payment->create($this->apiContext);
-            echo $payment;
+            // echo $payment;
 
-            echo "\n\nRedirect user to aproval_url: " . $payment->getApprovalLink() . "\n";
+           return redirect()->away($payment->getApprovalLink());
         }
         catch (PayPalConnectionException $ex){
-            echo $ex->getData();
+            $data =  $ex->getData();
         }
 
+    }
+
+    public function status(Request $request){
+        dd($request->all());
     }
 }
