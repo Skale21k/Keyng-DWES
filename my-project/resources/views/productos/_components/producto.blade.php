@@ -25,6 +25,7 @@
                                 <div
                                     class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                                     @foreach($productos as $producto)
+                                    @if($producto->cantidad == 0)
                                     <div class="col mb-4">
                                         <div class="product-item">
                                             <figure style="height:180px; width: 300px;">
@@ -71,6 +72,7 @@
                                             </form>
                                         </div>
                                     </div>
+                                    @endif
                                     @endforeach
                                 </div>
 
