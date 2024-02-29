@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # KeyNG
 ### Miembros:
 <a href="https://github.com/Skale21k"><i>Alexandru</a>
@@ -51,11 +50,14 @@
 2. Una vez instalado, clona el repositorio.
         
         git clone https://github.com/Skale21k/Keyng-DWES
-3. Al clonarlo, se te copiarán los ficheros en la carpeta <u>Keyng-DWES</u>, entra en la carpeta e inicia el docker (<a href="https://docs.docker.com/desktop/">Instalación de Docker</a>).
+
+3. Ahora toca darle los ficheros de configuración, para ello descarga el fichero de este <a href="https://mega.nz/file/K7pxxAQT#1cEl5mTMiZWui-uktJnGcw62XbQYoPsCd0DFx5umH-o">enlace</a>, y mueve el fichero .env a la misma carpeta en la que está el fichero llamado <i>docker-compose.yml</i>, y dentro de my-project mueve la carpeta vendor y el fichero .env(DENTRO DE my-project) <b>SE TIENE QUE LLAMAR .ENV, EL CONTENIDO DEL PARÉNTESIS ES SOLO UN DISTINTIVO.</b>
+
+4. Una vez metidos los ficheros de configuarción, solo toca entrar en la carpeta e inicia el docker (<a href="https://docs.docker.com/desktop/">Instalación de Docker</a>).
    
         docker compose up -d
 
-4. Entra en http://localhost:8000 para ver el proyecto.
+5. Entra en http://localhost:8000 para ver el proyecto.
 ---
 <div style="display: flex;">
     <img src="https://media.discordapp.net/attachments/1194692021600927868/1202679473246568518/image-removebg-preview.png?ex=65ce558b&is=65bbe08b&hm=4386993c6f222dbabdde435f225ded5fbace4391f3392c4ed211c75f3421392d&=&format=webp&quality=lossless" width="150" style="margin-left: -20px;"><br>
@@ -116,9 +118,11 @@
 2. Una vez instalado, clona el repositorio.
         
         git clone https://github.com/Skale21k/Keyng-DWES
-3. Al clonarlo, se te copiarán los ficheros en la carpeta <u>Keyng-DWES</u>, entra en la carpeta e inicia el docker (<a href="https://docs.docker.com/desktop/">Instalación de Docker</a>).
+3. Al clonarlo, se te copiarán los ficheros en la carpeta <u>Keyng-DWES</u>, ahora se ha de poner los ficheros de configuración (y el vendor).
+Para ello, descarga los ficheros de este enlace: 
    
-        docker compose up -d
+        
+
 
 4. Entra en http://localhost:8000 para ver el proyecto.
 ---
@@ -128,4 +132,3 @@
 <p>©Todos los derechos reservados. Ninguna parte de este software, incluyendo pero no limitado a su código fuente, diseño, funcionalidades, o documentación, puede ser reproducida, distribuida o utilizada de ninguna manera sin el permiso expreso por escrito de los propietarios de KeyNG Supermercado. Cualquier uso no autorizado del software será considerado una violación de los derechos de propiedad intelectual y se tomarán las medidas legales correspondientes. KeyNG Supermercado es una marca registrada y cualquier uso no autorizado de la misma está estrictamente prohibido.</p>
     
 </div>
->>>>>>> feature/Administrador
