@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\PaypalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,6 +57,13 @@ Route::controller(CartController::class)->group(function () {
 });
 
 //Rutas de tickets
+
 Route::controller(TicketController::class)->group(function () {
     Route::get('/tickets', 'index')->name('tickets.index');
+});
+
+//Rutas de paypal
+Route::controller(PaypalController::class)->group(function () {
+    Route::post('/paypal/pay', 'pagoPayPal')->name('pagos.paypal');
+    Route::get('/paypal/status', 'status')->name('pagos.status');
 });
