@@ -1,6 +1,6 @@
 <div class="col mb-4">
     <div class="product-item">
-        <figure style="height:200px; width: 300px;">
+        <figure style="height:180px; width: 300px;">
             <a href="{{ route('productos.show', $producto) }}"
                 title="{{ $producto->nombre }}">
                 <img src="{{ $producto->imagen_url }}"
@@ -8,6 +8,7 @@
                     class="tab-image" id="imagenProducto">
 
         </figure>
+        <hr>
         <h3>{{ $producto->nombre }}</h3>
             </a>
         <span class="price">{{ $producto->precio }}€</span>
