@@ -11,7 +11,8 @@ class ProductoController extends Controller
 {
     public function index(){
         $productos = Producto::paginate(12);
-        return view('productos.index', compact('productos'));
+        $categorias = Categoria::all();
+        return view('productos.index', compact('productos', 'categorias'));
     }
 
     // Para probar si se crean
@@ -99,10 +100,11 @@ class ProductoController extends Controller
 
         return redirect()->back()->with('success', 'Producto actualizado exitosamente.');
     }
-    public function productosPorCategoria($categoria)
-    {
-        $productos = Producto::where('categoria', $categoria)->get();
-        return view('productos.productosPorCategoria', compact('productos'));
+    public function showCategoria($id){
+        $productos = Producto::where('categoria_id', $id)->paginate(12);
+        $categoria = Categoria::where('id', $id)->first()->nombre;
+        $categorias = Categoria::all();
+        return view('productos.productosCat', compact('productos', 'categoria', 'categorias'));
     }
 
 }
