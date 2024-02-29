@@ -58,7 +58,7 @@ class PaypalController extends Controller
         try{
             $payment->create($this->apiContext);
             // echo $payment;
-
+            
            return redirect()->away($payment->getApprovalLink());
         }
         catch (PayPalConnectionException $ex){
