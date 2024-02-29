@@ -1,8 +1,22 @@
-<div id="menuIndex">
+<div class="menuIndex" id="menuIndex">
     <h2>Categorías</h2>
-    <ul >
+
+    <ul>
         @foreach($categorias as $categoria)
-        <li><a href="{{ route('productos.productosCat', $categoria->id) }}">{{$categoria->nombre}}</a></li>
+        <li>
+            <a href="{{ route('productos.productosCat', $categoria->id) }}">{{$categoria->nombre}}</a>
+        </li>
         @endforeach
     </ul>
-  </div>
+</div>
+<button id="toggleMenu">Toggle Menu</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var menu = document.querySelector('.menuIndex');
+
+    document.getElementById('toggleMenu').addEventListener('click', function() {
+        menu.classList.toggle('collapsed');
+    });
+});
+</script>

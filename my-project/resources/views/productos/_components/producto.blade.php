@@ -105,5 +105,5 @@
         </script>
 
     </section>
-    {{ $productos->links() }}
+    <nav class="paginateNav">   {{ $productos->links() }} </nav>
 </div>
