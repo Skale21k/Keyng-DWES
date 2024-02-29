@@ -14,6 +14,8 @@ use PayPal\Auth\OAuthTokenCredential;
 use Illuminate\Support\Facades\Config;
 use PayPal\Exception\PayPalConnectionException;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use App\Models\Ticket;
+use App\Models\DetalleTicket;
 
 class PaypalController extends Controller
 {
@@ -86,6 +88,25 @@ class PaypalController extends Controller
         $result = $payment->execute($execution, $this->apiContext);
 
         if($result->getState() === 'approved'){
+
+            // Crear un nuevo ticket
+            $ticket = Ticket::create([
+                'user_id' => auth()->id(),
+                'fecha' => now(),
+                // Otros campos relevantes del ticket
+            ]);
+
+            // Obtener los detalles del carrito
+            $detallesCarrito = Cart::content();
+
+            // Guardar los detalles del carrito como detalles del ticket
+            foreach ($detallesCarrito as $item) {
+                DetalleTicket::create([
+                    'ticket_id' => $ticket->id,
+                    'producto_id' => $item->id, // Asegúrate de tener un campo adecuado en tu tabla de productos
+                    'cantidad' => $item->qty,
+                ]);
+            }
             Cart::destroy();
             return redirect("/")->with('success', "Pago realizado correctamente, gracias.");
         }
