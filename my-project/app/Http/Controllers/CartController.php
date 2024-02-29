@@ -13,7 +13,7 @@ class CartController extends Controller
 {
     public function add(Request $request){
         $producto = Producto::find($request->id);
-        
+
  // Busca el producto en el carrito
 $cartItem = Cart::search(function ($cartItem, $rowId) use ($producto) {
     return $cartItem->id === $producto->id;
