@@ -61,7 +61,7 @@ Route::controller(CartController::class)->group(function () {
 //Rutas de tickets
 
 Route::controller(TicketController::class)->group(function () {
-    Route::get('/tickets', 'index')->name('tickets.index');
+    Route::get('/tickets', 'index')->name('tickets.index')->middleware('auth');
 });
 
 //Rutas de paypal
