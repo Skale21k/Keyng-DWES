@@ -529,7 +529,7 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
 .product-item figure {
-  background: #F9F9F9;
+  background: white;
   border-radius: 12px;
   text-align: center;
 }
