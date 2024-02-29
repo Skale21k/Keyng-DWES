@@ -66,6 +66,6 @@ Route::controller(TicketController::class)->group(function () {
 
 //Rutas de paypal
 Route::controller(PaypalController::class)->group(function () {
-    Route::post('/paypal/pay', 'pagoPayPal')->name('pagos.paypal');
-    Route::get('/paypal/status', 'status')->name('pagos.status');
+    Route::post('/paypal/pay', 'pagoPayPal')->name('pagos.paypal')->middleware('auth');
+    Route::get('/paypal/status', 'status')->name('pagos.status')->middleware('auth');
 });
