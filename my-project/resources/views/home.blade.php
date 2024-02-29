@@ -18,7 +18,11 @@
 @section('content')
     <h1>Productos Más Vendidos</h1>
 
-
+    @if ($error = $errors->first('unidades'))
+    <div class="alert alert-danger">
+        {{ $error }}
+    </div>
+@endif
     @foreach ($productosPorCategoria as $categoria => $productos)
         <div class="categoria">
             <h2>{{ $categoria }}</h2>
