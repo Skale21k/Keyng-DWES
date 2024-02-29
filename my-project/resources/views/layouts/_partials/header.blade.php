@@ -21,8 +21,8 @@
                 <li><a href="{{ route('usuarios.login') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
                             alt=""></a></li>
                 @else
-                <li><a href="{{ route('usuarios.index') }}"> <img src="{{ Storage::url('img/usuario.png') }}"
-                            alt=""></a></li>
+                <li><a href="{{ route('usuarios.index') }}"> <img src="{{ Auth::user()->imagen_url }}"
+                            alt="" style="border-radius: 100%;"></a></li>
                 @endguest
 
 

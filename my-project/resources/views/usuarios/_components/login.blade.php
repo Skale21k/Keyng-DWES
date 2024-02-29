@@ -1,4 +1,4 @@
-<form action="{{ route('usuarios.login') }}" method="POST">
+<form action="{{ route('usuarios.auth') }}" method="POST">
 @csrf
     <!-- Email input -->
     <div class="form-outline mb-4">
@@ -16,6 +16,6 @@
 
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+    <button type="submit" class="btn btn-primary btn-block mb-4">Iniciar Sesión</button>
 
 </form>

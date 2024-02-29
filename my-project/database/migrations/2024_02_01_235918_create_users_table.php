@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('rol', 80)->default('user');
             $table->string('email', 80)->unique();
             $table->string('password', 255);
+            $table->string('imagen', 255)->nullable()->default('usuario.png');
             $table->string('direccion', 255)->nullable();
             $table->timestamps();
         });

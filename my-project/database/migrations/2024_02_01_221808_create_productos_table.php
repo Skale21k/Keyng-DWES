@@ -18,7 +18,10 @@ return new class extends Migration
             $table->double('precio');
             $table->integer('unidades');
             $table->string('imagen', 255)->nullable();
-            $table->string('categoria', 80)->nullable();
+            $table->unsignedBigInteger('categoria_id')->nullable();
+            $table->foreign('categoria_id')
+                    ->references('id')->on('categorias')
+                    ->onDelete('set null');
             $table->timestamps();
         });
     }

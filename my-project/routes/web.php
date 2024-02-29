@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\PaypalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,18 +40,31 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::get('/usuarios', 'index')->name('usuarios.index');
     Route::get('/usuarios/create',  'create')->name('usuarios.create');
     Route::post('/usuarios', 'store')->name('usuarios.store');
-    Route::get('/login', 'login')->name('login');
-    Route::post('/login', 'login')->name('usuarios.login');
+    Route::get('/login', 'login')->name('usuarios.login');
+    Route::post('/login', 'auth')->name('usuarios.auth');
     Route::post('/logout', 'logout')->name('usuarios.logout');
     Route::get('/admin/users', 'verUsuarios')->name('admin.users')->middleware('admin');
-    Route::delete('/usuarios/{usuario}', 'destroy')->name('users.destroy')->middleware('admin');
+    Route::delete('/usuarios/{usuario}', 'destroy')->name('usuarios.destroy')->middleware('admin');
+    Route::get('/usuarios/{usuario}/edit', 'edit')->name('usuarios.edit')->middleware('auth');
+    Route::put('/usuarios/{usuario}', 'update')->name('usuarios.update')->middleware('auth');
 });
 
 //Rutas de carrito
 Route::controller(CartController::class)->group(function () {
-    Route::post('/cart/add', 'add')->name('carrito.add');
-    Route::get('/cart/checkout', 'checkout')->name('carrito.checkout');
-    Route::get('/cart/clear', 'clear')->name('carrito.clear');
-    Route::post('/cart/remove', 'remove')->name('carrito.remove');
+    Route::post('/cart/add', 'add')->name('carrito.add')->middleware('auth');
+    Route::get('/cart/checkout', 'checkout')->name('carrito.checkout')->middleware('auth');
+    Route::get('/cart/clear', 'clear')->name('carrito.clear')->middleware('auth');
+    Route::post('/cart/remove', 'remove')->name('carrito.remove')->middleware('auth');
 });
 
+//Rutas de tickets
+
+Route::controller(TicketController::class)->group(function () {
+    Route::get('/tickets', 'index')->name('tickets.index');
+});
+
+//Rutas de paypal
+Route::controller(PaypalController::class)->group(function () {
+    Route::post('/paypal/pay', 'pagoPayPal')->name('pagos.paypal');
+    Route::get('/paypal/status', 'status')->name('pagos.status');
+});

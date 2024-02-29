@@ -22,7 +22,7 @@ class ProductoFactory extends Factory
             'precio' => $this->faker->numberBetween(1, 99),
             'unidades' => $this->faker->numberBetween(1, 99),
             'imagen' => $this->faker->imageUrl(),
-            'categoria' => $this->faker->word(),
+            'categoria' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Categoria;
 
 class ProductoController extends Controller
 {
@@ -15,7 +16,8 @@ class ProductoController extends Controller
 
     // Para probar si se crean
     public function create(request $request){
-        return view('productos.create');
+        $categorias = Categoria::all();
+        return view('productos.create', compact('categorias'));
     }
 
     public function store(Request $request)
@@ -39,7 +41,7 @@ class ProductoController extends Controller
         $producto->precio = $request->precio;
         $producto->unidades = $request->unidades;
         $producto->imagen = $nombreImagen; // Guarda la ruta de la imagen en el campo 'imagen'
-        $producto->categoria = $request->categoria;
+        $producto->categoria_id = $request->categoria;
 
         $producto->save();
 
@@ -75,7 +77,8 @@ class ProductoController extends Controller
     public function edit(Producto $producto)
     {
         //dd($producto);
-        return view('productos.edit', compact('producto'));
+        $categorias = Categoria::all();
+        return view('productos.edit', compact('producto'), compact('categorias'));
     }
 
     public function update(Producto $producto, Request $request){
@@ -83,7 +86,7 @@ class ProductoController extends Controller
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
         $producto->unidades = $request->unidades;
-        $producto->categoria = $request->categoria;
+        $producto->categoria_id = $request->categoria;
         if(isset($request->imagen)){
             Storage::delete('public/img/' . $producto->imagen);
             $imagen = $request->file('imagen');
