@@ -753,6 +753,9 @@ h6 {
 .menuIndex.collapsed {
     width: 0;
 }
+.menuIndex h2 {
+    text-align: center;
+}
 
 
 #tituloCat {
@@ -764,7 +767,11 @@ h6 {
 }
 
 #toggleMenu {
-    margin-left: 300px;
+   position: absolute;
+   top: 50%;
+   left: 320px;
+   height: 50px;
+   rotate: 180deg;
 }
 
 

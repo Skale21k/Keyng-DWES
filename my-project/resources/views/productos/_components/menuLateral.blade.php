@@ -9,14 +9,23 @@
         @endforeach
     </ul>
 </div>
-<button id="toggleMenu">Toggle Menu</button>
+<img id="toggleMenu" src="{{ Storage::url('img/flecha.png') }}" alt="Flecha">
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var menu = document.querySelector('.menuIndex');
+    var toggleButton = document.getElementById('toggleMenu');
 
-    document.getElementById('toggleMenu').addEventListener('click', function() {
+    toggleButton.addEventListener('click', function() {
         menu.classList.toggle('collapsed');
+        this.classList.toggle('collapsed');
+        if (this.classList.contains('collapsed')) {
+            this.style.transform = 'translateX(300px) rotate(180deg)';
+            this.style.transition = 'transform 0.5s ease';
+        } else {
+            this.style.transform = 'translateX(0) rotate(0deg)';
+            this.style.transition = 'transform 0.5s ease';
+        }
     });
 });
 </script>
