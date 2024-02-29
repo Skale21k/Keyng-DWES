@@ -3589,6 +3589,16 @@ tbody.collapse.show {
     border-left: 1px solid #ced4da;
     border-radius: 0 0.25rem 0.25rem 0;
 }
+
+.paginateNav {
+    display: flex;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
 .nav {
     display: -webkit-box;
     display: -ms-flexbox;

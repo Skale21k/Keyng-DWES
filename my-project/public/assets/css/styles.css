@@ -709,42 +709,54 @@ h6 {
 }
 
 /* menu */
-#menuIndex {
+.menuIndex {
     position: fixed;
     top: 120px;
     left: 0;
     height: 100%;
-    width: 300px; /* Ancho del menú, puedes ajustarlo según tus necesidades */
-    background-color: #333; /* Color de fondo del menú */
-    color: #fff; /* Color del texto en el menú */
-    padding: 20px; /* Espaciado interno del menú */
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
     box-sizing: border-box;
+    overflow: hidden;
+    transition: width 0.3s ease-out; /* Ajusta la duración y la función de temporización según tus preferencias */
 }
-
-#menuIndex a {
+.menuIndex a {
     color: #fff; /* Color del texto en los enlaces */
     text-decoration: none; /* Quitamos el subrayado de los enlaces */
     display: block; /* Hacemos que los enlaces ocupen todo el ancho del menú */
     margin-bottom: 10px; /* Espaciado entre enlaces */
 }
-#menuIndex li {
+.menuIndex li {
+    width: 80%;
     padding: 10px;
     margin-bottom: 10px; /* Espaciado entre elementos de la lista */
     background-color: #444; /* Color de fondo de los elementos de la lista */
     border-radius: 5px; /* Bordes redondeados */
     text-align: center; /* Centra el texto dentro de los elementos li */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón por encima */
+
 }
-#menuIndex li:hover {
+.menuIndex li:hover {
     background-color: #555; /* Color de fondo de los elementos de la lista al pasar el ratón */
 }
 
-#menuIndex ul {
+.menuIndex ul {
     list-style: none; /* Quitamos los puntos de la lista */
     padding: 0; /* Quitamos el espaciado interno de la lista */
+    display: flex; /* Utilizamos flexbox para centrar el contenido */
+    justify-content: center; /* Centramos horizontalmente el contenido */
+    align-items: center; /* Centramos verticalmente el contenido */
+    flex-direction: column;
 }
-.producto {
-    margin-left: 300px;
+.menuIndex.collapsed {
+    width: 0;
 }
+.menuIndex h2 {
+    text-align: center;
+}
+
 
 #tituloCat {
     margin-left: 300px;
@@ -753,3 +765,14 @@ h6 {
 #cantidadInput{
     text-align: center;
 }
+
+#toggleMenu {
+   position: absolute;
+   top: 50%;
+   left: 320px;
+   height: 50px;
+   rotate: 180deg;
+}
+
+
+
