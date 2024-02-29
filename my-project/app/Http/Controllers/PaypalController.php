@@ -16,6 +16,7 @@ use PayPal\Exception\PayPalConnectionException;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Models\Ticket;
 use App\Models\DetalleTicket;
+use App\Models\Producto;
 
 class PaypalController extends Controller
 {
@@ -103,9 +104,15 @@ class PaypalController extends Controller
             foreach ($detallesCarrito as $item) {
                 DetalleTicket::create([
                     'ticket_id' => $ticket->id,
-                    'producto_id' => $item->id, // Asegúrate de tener un campo adecuado en tu tabla de productos
+                    'producto_id' => $item->id,
                     'cantidad' => $item->qty,
                 ]);
+
+                $producto = Producto::find($item->id);
+
+                $producto->unidades -= $item->qty;
+
+                $producto->save();
             }
             Cart::destroy();
             return redirect("/")->with('success', "Pago realizado correctamente, gracias.");
