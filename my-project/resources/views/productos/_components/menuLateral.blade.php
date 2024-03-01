@@ -3,8 +3,9 @@
 
     <ul>
         @foreach($categorias as $categoria)
-        <li>
-            <a href="{{ route('productos.productosCat', $categoria->id) }}">{{$categoria->nombre}}</a>
+
+        <li onclick="window.location.href = '{{ route('productos.productosCat', $categoria->id) }}'">
+            {{$categoria->nombre}}
         </li>
         @endforeach
     </ul>

@@ -723,11 +723,14 @@ h6 {
     overflow: hidden;
     transition: width 0.3s ease-out; /* Ajusta la duración y la función de temporización según tus preferencias */
 }
-.menuIndex a {
+.menuIndex li a {
     color: #fff; /* Color del texto en los enlaces */
     text-decoration: none; /* Quitamos el subrayado de los enlaces */
     display: block; /* Hacemos que los enlaces ocupen todo el ancho del menú */
     margin-bottom: 10px; /* Espaciado entre enlaces */
+    width: 100%;
+    height: 100%;
+
 }
 .menuIndex li {
     width: 80%;
