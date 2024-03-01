@@ -1,5 +1,5 @@
 <body class="body">
-    <button type="button" class="btn btn-secondary"><a href="{{route('productos.index')}}">Volver</a></button>
+    <button type="button" class="btn btn-secondary" onclick="history.back()">Volver</button>
         <div class="images" >
             <img src="{{ $producto->imagen_url }}" alt="{{ $producto->nombre }}" class="imgDetalle" />
         </div>

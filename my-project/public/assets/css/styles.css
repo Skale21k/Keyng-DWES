@@ -99,6 +99,7 @@ CSS STRUCTURE:
     :root {
         --header-height: 100px;
         --header-height-min: 80px;
+
     }
 }
 /* Theme Colors */
@@ -714,7 +715,7 @@ h6 {
     top: 120px;
     left: 0;
     height: 100%;
-    width: 300px;
+    width: 0px;
     background-color: #333;
     color: #fff;
     padding-top: 20px;
@@ -751,7 +752,7 @@ h6 {
     flex-direction: column;
 }
 .menuIndex.collapsed {
-    width: 0;
+    width: 300px;
 }
 .menuIndex h2 {
     text-align: center;
@@ -769,10 +770,12 @@ h6 {
 #toggleMenu {
    position: absolute;
    top: 50%;
-   left: 320px;
+   left: 20px;
    height: 50px;
-   rotate: 180deg;
+
 }
-
-
+.edit-user {
+    width: 1000px;
+    margin: 0 auto;
+}
 
