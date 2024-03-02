@@ -49,13 +49,7 @@ class CartController extends Controller
             'options' => ['imagen' => $producto->imagen_url]
         ]);
 
-        $url = URL::previous();
-
-        if(strpos($url, '/productos/filtro') !== false){
-            return redirect("/")->with('message', 'Producto añadido al carrito correctamente.');
-        } else{
-            return Redirect::back()->with('success', 'Producto añadido al carrito correctamente.');
-        }
+        return Redirect::back()->with('success', 'Producto añadido al carrito correctamente.');
         
     }
 
