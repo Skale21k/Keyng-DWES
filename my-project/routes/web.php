@@ -26,9 +26,9 @@ Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos.index');
     Route::get('/productos/create',  'create')->name('productos.create')->middleware('admin');
     Route::post('/productos', 'store')->name('productos.store')->middleware('admin');
-    Route::post('/productos/filtro', 'filtro')->name('productos.filtro');
+    Route::get('/productos/filtro', 'filtro')->name('productos.filtro');
     Route::get('/categoria/{id}', 'showCategoria')->name('productos.productosCat');
-    Route::get('/productos/{id}', 'show')->name('productos.show');
+    Route::get('/producto/{id}', 'show')->name('productos.show');
     Route::get('/admin/productos', 'verProductos')->name('admin.productos')->middleware('admin');
     Route::delete('/productos/{producto}', 'destroy')->name('productos.destroy')->middleware('admin');
     Route::get('/productos/{producto}/edit', 'edit')->name('productos.edit')->middleware('admin');

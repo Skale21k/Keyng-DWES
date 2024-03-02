@@ -10,7 +10,7 @@
             <ul class="utilidad">
                 <li>
                     <div class="formBusqueda">
-                        <form action="{{ route('productos.filtro') }}" method="POST" id="buscarform">
+                        <form action="{{ route('productos.filtro') }}" method="GET" id="buscarform">
                             @csrf
                             <input type="text" name="nombre" placeholder="Buscar" />
                         </form>

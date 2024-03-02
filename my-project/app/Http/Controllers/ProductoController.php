@@ -63,7 +63,7 @@ class ProductoController extends Controller
                       $query->where('nombre', 'like', '%' . $nombre . '%');
                   });
         })->where('unidades', '>=', 1)
-        ->paginate(12);
+        ->paginate(12)->withQueryString();;
 
         return view('productos.filtro', compact('productos', 'nombre'));
     }
