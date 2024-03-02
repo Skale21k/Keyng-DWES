@@ -55,7 +55,8 @@
                                                         <span class="input-group-btn">
                                                             <button type="button"
                                                                 class="quantity-right-plus btn btn-success btn-number"
-                                                                data-type="plus">
+                                                                data-type="plus"
+                                                                data-unidades="{{$producto->unidades}}">
                                                                 <svg width="16" height="16">
                                                                     <use xlink:href="#plus"></use>
                                                                 </svg>
@@ -80,23 +81,25 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function () {
-                // Función para aumentar y disminuir la cantidad
                 $('.quantity-right-plus').click(function (e) {
                     // Aumentar la cantidad
                     e.preventDefault();
                     var quantityInput = $(this).closest('.product-item').find('.input-number');
                     var quantity = parseInt(quantityInput.val());
-                    quantityInput.val(quantity + 1);
+                    var cantidadUnidades = $(this).data('unidades'); // Obtén las unidades del producto correcto
+                    if(quantity < cantidadUnidades){
+                        quantityInput.val(quantity + 1);
+                    }
                 });
 
                 $('.quantity-left-minus').click(function (e) {
-                    // Disminuir la cantidad
                     e.preventDefault();
                     var quantityInput = $(this).closest('.product-item').find('.input-number');
                     var quantity = parseInt(quantityInput.val());
                     if (quantity > 1) {
                         quantityInput.val(quantity - 1);
                     }
+
                 });
             });
         </script>
