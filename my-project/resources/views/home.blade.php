@@ -23,21 +23,23 @@
     @endif
     <h1>Productos Más Vendidos</h1>
     @foreach ($productosPorCategoria as $categoria => $productos)
-        <div class="categoria">
-            <h2>{{ $categoria }}</h2>
-            <hr>
-        </div>
-        <div id="formList">
-            <div id="list">
-                @foreach ($productos as $producto)
-                @if($producto->unidades >= 1)
-                    @component('productos._components.productosBuenos', ['producto' => $producto])
-                    @endcomponent
-                @endif
-                @endforeach
-
+        @if($productos->count() > 0)
+            <div class="categoria">
+                <h2>{{ $categoria }}</h2>
+                <hr>
             </div>
-        </div>
+            <div id="formList">
+                <div id="list">
+                    @foreach ($productos as $producto)
+                    @if($producto->unidades >= 1)
+                        @component('productos._components.productosBuenos', ['producto' => $producto])
+                        @endcomponent
+                    @endif
+                    @endforeach
+
+                </div>
+            </div>  
+        @endif
     @endforeach
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -396,7 +396,7 @@ class ProductoSeeder extends Seeder
                 'precio' => 9999.99,
                 'unidades' =>1,
                 'imagen' => 'kuki.jpg',
-                'categoria_id' => '2',
+                'categoria_id' => '6',
             ],
             [
                 'nombre' => 'Kuki Sentao',
@@ -404,8 +404,48 @@ class ProductoSeeder extends Seeder
                 'precio' => 9999.99,
                 'unidades' =>1,
                 'imagen' => 'kuki_sentao.jpg',
-                'categoria_id' => '2',
+                'categoria_id' => '6',
             ],
+            [
+                'nombre' => 'Juguete de Cerdo',
+                'descripcion' => 'Juguete de cerdo para perros',
+                'precio' => 9.99,
+                'unidades' => 50,
+                'imagen' => 'cerdo.jpg',
+                'categoria_id' => '5',
+            ],
+            [
+                'nombre' => 'Don Quijote de la Mancha',
+                'descripcion' => 'Don Quijote de la Mancha, edición ilustrada',
+                'precio' => 19.99,
+                'unidades' => 30,
+                'imagen' => 'quijote.jpg',
+                'categoria_id' => '7',
+            ],
+            [
+                'nombre' => 'Disco Slipknot 1º Álbum',
+                'descripcion' => 'Disco de vinilo del primer álbum de Slipknot',
+                'precio' => 29.99,
+                'unidades' => 20,
+                'imagen' => 'slipknot.jpg',
+                'categoria_id' => '8',
+            ],
+            [
+                'nombre' => 'DVD Fight Club',
+                'descripcion' => 'Película en DVD de Fight Club',
+                'precio' => 9.99,
+                'unidades' => 40,
+                'imagen' => 'fight_club.jpg',
+                'categoria_id' => '9',
+            ],
+            [
+                'nombre' => 'Halo 3 para Xbox 360',
+                'descripcion' => 'Videojuego Halo 3 para Xbox 360',
+                'precio' => 14.99,
+                'unidades' => 30,
+                'imagen' => 'halo3.png',
+                'categoria_id' => '10',
+            ]
 
 
             
