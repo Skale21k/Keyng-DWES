@@ -64,10 +64,20 @@
         php artisan storage:link
 
 6. Entra en http://localhost:8000 para ver el proyecto.
+
+## Como pagar en PayPal
+
+Nuestro proyecto utiliza PayPal sandbox, un api utilizado por desarrolladores para realizar pruebas de pago, por lo que no se podra pagar con una cuenta real.
+
+Para poder pagar, tendremos que entrar en https://developer.paypal.com/dashboard/accounts con nuestra cuenta de PayPal normal, y crearemos una cuenta de cliente, luego tendremos que usar las credenciales para iniciar sesion y poder pagar.
+
+Para Julian, una cuenta de prueba seria la siguiente:
+
+Correo: sb-pcqwy29719522@personal.example.com <br>
+Contraseña: pruebakeyng
+
 ---
-<div style="display: flex;">
-    <img src="https://media.discordapp.net/attachments/1194692021600927868/1202679473246568518/image-removebg-preview.png?ex=65ce558b&is=65bbe08b&hm=4386993c6f222dbabdde435f225ded5fbace4391f3392c4ed211c75f3421392d&=&format=webp&quality=lossless" width="150" style="margin-left: -20px;"><br>
-    
-<p>©Todos los derechos reservados. Ninguna parte de este software, incluyendo pero no limitado a su código fuente, diseño, funcionalidades, o documentación, puede ser reproducida, distribuida o utilizada de ninguna manera sin el permiso expreso por escrito de los propietarios de KeyNG Supermercado. Cualquier uso no autorizado del software será considerado una violación de los derechos de propiedad intelectual y se tomarán las medidas legales correspondientes. KeyNG Supermercado es una marca registrada y cualquier uso no autorizado de la misma está estrictamente prohibido.</p>
-    
-</div>
+
+
+
+<p>KeyNG© Todos los derechos reservados. Ninguna parte de este software, incluyendo pero no limitado a su código fuente, diseño, funcionalidades, o documentación, puede ser reproducida, distribuida o utilizada de ninguna manera sin el permiso expreso por escrito de los propietarios de KeyNG Supermercado. Cualquier uso no autorizado del software será considerado una violación de los derechos de propiedad intelectual y se tomarán las medidas legales correspondientes. KeyNG Supermercado es una marca registrada y cualquier uso no autorizado de la misma está estrictamente prohibido.</p>

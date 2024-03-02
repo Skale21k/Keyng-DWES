@@ -33,11 +33,11 @@
     <div class="navegacion">
         <nav>
         <ul>
+            <li><a href="{{route('home')}}">Inicio</a></li>
             <li><a href="{{route('productos.index')}}">Productos</a></li>
             @admin
             <li><a href="{{route('admin.users')}}">Administración</a></li>
             @endadmin
-            <li id="sobreNosotos">Sobre Nosotros</li>
         </ul>
     </nav>
     </div>
