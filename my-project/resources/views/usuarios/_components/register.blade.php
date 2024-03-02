@@ -80,13 +80,5 @@ $rutaAction = route('usuarios.update', $usuarios);
 </form>
 @if(!$modoCreacion)
     <button type="button" style="top:10px; position: relative;" onclick="history.back()">Volver</button>
+    <script src="{{ asset('assets/js/passRequired.js') }}"></script>
 @endif
-<script>
-    document.getElementById('registerPassword').addEventListener('input', function () {
-        if (this.value.length > 0) {
-            document.getElementById('registerRepeatPassword').required = true;
-        } else {
-            document.getElementById('registerRepeatPassword').required = false;
-        }
-    });
-</script>
