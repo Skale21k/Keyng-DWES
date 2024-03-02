@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Categoria;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\MessageBag;
 
 class ProductoController extends Controller
 {
@@ -52,9 +54,16 @@ class ProductoController extends Controller
     public function show($id)
     {
         $producto = Producto::find($id);
+
+        if(!$producto){
+            $errors = new MessageBag(['unidades' => ['No existe el producto que buscas.']]);
+            return redirect("/")->withErrors($errors);
+        }
+
+        
         return view('productos.show', compact('producto'));
     }
-    //filtra todo lo que contenga ese nombre
+
     public function filtro(Request $request){
         $nombre = $request->nombre;
         $productos = Producto::where(function ($query) use ($nombre) {
