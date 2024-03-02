@@ -50,7 +50,7 @@
                                                                 </svg>
                                                             </button>
                                                         </span>
-                                                        <input type="text" name="quantity[{{ $producto->id }}]"
+                                                        <input id="cantidadInput" type="text" name="quantity[{{ $producto->id }}]"
                                                             class="form-control input-number" value="1" min="1">
                                                         <span class="input-group-btn">
                                                             <button type="button"

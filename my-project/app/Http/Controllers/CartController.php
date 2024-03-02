@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\MessageBag;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 
 
 class CartController extends Controller
@@ -48,7 +49,14 @@ class CartController extends Controller
             'options' => ['imagen' => $producto->imagen_url]
         ]);
 
-        return Redirect::back()->with('message', 'Producto añadido al carrito correctamente.');
+        $url = URL::previous();
+
+        if(strpos($url, '/productos/filtro') !== false){
+            return redirect("/")->with('message', 'Producto añadido al carrito correctamente.');
+        } else{
+            return Redirect::back()->with('success', 'Producto añadido al carrito correctamente.');
+        }
+        
     }
 
     public function checkout()
