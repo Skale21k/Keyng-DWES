@@ -14,14 +14,7 @@ class DetalleTicketSeeder extends Seeder
     public function run(): void
     {
 
-        for ($i = 1; $i <= self::ENTRADAS; $i++) {
-            $detallesTicket[] = [
-                'ticket_id' => 4,
-                'producto_id' => $i,
-                'cantidad' => $i,
-            ];
-        }
-/*
+
         $detallesTicket = [
             [
                 'ticket_id' => 1,
@@ -50,7 +43,6 @@ class DetalleTicketSeeder extends Seeder
             ],
 
         ];
-*/
         foreach ($detallesTicket as $detalleTicket) {
             \App\Models\DetalleTicket::create($detalleTicket);
         }
