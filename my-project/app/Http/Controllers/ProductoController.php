@@ -59,12 +59,10 @@ class ProductoController extends Controller
         $nombre = $request->nombre;
         $productos = Producto::where(function ($query) use ($nombre) {
             $query->where('nombre', 'like', '%' . $nombre . '%')
-                  ->where('unidades', '>=', 1)
-                  ->orWhere('descripcion', 'like', '%' . $nombre . '%')
                   ->orWhereHas('categoria', function ($query) use ($nombre) {
                       $query->where('nombre', 'like', '%' . $nombre . '%');
                   });
-        })
+        })->where('unidades', '>=', 1)
         ->paginate(12);
 
         return view('productos.filtro', compact('productos', 'nombre'));
