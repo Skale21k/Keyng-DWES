@@ -25,7 +25,7 @@
                                 <div
                                     class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                                     @foreach($productos as $producto)
-                                    <div class="col mb-4">
+                                    <div class="productos">
                                         <div class="product-item">
                                             <figure style="height:200px; width: 300px;">
                                                 <a href=" {{ route('productos.show', $producto) }}"
