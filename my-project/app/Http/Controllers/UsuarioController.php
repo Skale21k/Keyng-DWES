@@ -23,6 +23,13 @@ class UsuarioController extends Controller
     }
 
     public function store(Request $request){
+        $request->validate([
+            'email' => 'required|email|unique:users,email',
+        ],  [
+
+            'email'=> 'El correo electronico ya esta registrado.',
+        ]);
+
         $p = new User();
         $p->nombre = $request->nombre;
         $p->email = $request->email;
