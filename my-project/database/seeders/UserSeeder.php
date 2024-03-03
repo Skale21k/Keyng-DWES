@@ -66,6 +66,12 @@ class UserSeeder extends Seeder
                 'rol' => 'admin',
                 'imagen' => 'dario.jpg',
             ],
+            [
+                'nombre'=> 'Julian Parra Perales',
+                'email'=> 'julian@admin.com',
+                'password'=> 'julian',
+                'rol'=> 'admin',
+            ]
             
         ];
     
